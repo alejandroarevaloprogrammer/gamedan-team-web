@@ -5,30 +5,6 @@
   flex-direction: column;
 }
 
-.site-shell::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background:
-    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(to bottom, transparent, black 28%, black 76%, transparent);
-  opacity: .4;
-}
-
-.site-shell::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,98,187,.16), transparent 18%),
-    radial-gradient(circle at 75% 20%, rgba(49,241,179,.10), transparent 16%);
-}
-
 .site-header,
 .site-footer,
 .hero,

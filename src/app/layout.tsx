@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BackgroundFX } from "@/components/ui/BackgroundFX/BackgroundFX";
 import { Navbar } from '@/components/layout/Navbar/Navbar';
 import { Footer } from '@/components/layout/Footer/Footer';
 import './globals.css';
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="site-shell">
+          <BackgroundFX />
           <Navbar />
 
           {children}
