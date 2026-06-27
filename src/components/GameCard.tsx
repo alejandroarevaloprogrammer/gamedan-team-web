@@ -14,13 +14,19 @@ export function GameCard({ game }: { game: Game }) {
         <span className="poster-badge">{game.status}</span>
         <span className="poster-title">{game.title}</span>
       </div>
+
       <div className="game-card-body">
         <p className="eyebrow">{game.genre}</p>
         <h3>{game.title}</h3>
         <p>{game.description}</p>
+
         <div className="card-actions">
-          <a href="#trailer" className="button button-small">{game.trailerLabel}</a>
-          <a href="#" className="text-link">Ver detalles</a>
+          <a href="#trailer" className="button button-small">
+            {game.trailerLabel}
+          </a>
+          <a href="#" className="text-link">
+            View details
+          </a>
         </div>
       </div>
     </article>

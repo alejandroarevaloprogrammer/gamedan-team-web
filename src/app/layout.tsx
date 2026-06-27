@@ -16,7 +16,7 @@ const navItems = [
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body>
         <div className="site-shell">
           <header className="site-header">
@@ -24,13 +24,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <span className="brand-mark">GDT</span>
               <span>Game Dan Team</span>
             </Link>
+
             <nav className="site-nav" aria-label="Main navigation">
               {navItems.map((item) => (
-                <Link key={item.href} href={item.href}>{item.label}</Link>
+                <Link key={item.href} href={item.href}>
+                  {item.label}
+                </Link>
               ))}
             </nav>
           </header>
+
           {children}
+
           <footer className="site-footer">
             <p>© 2026 Game Dan Team · Indie games, visual novels & neon feelings.</p>
           </footer>

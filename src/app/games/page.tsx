@@ -7,10 +7,16 @@ export default function GamesPage() {
       <section className="page-hero">
         <p className="eyebrow">Games library</p>
         <h1>Our games</h1>
-        <p>Aquí irán los juegos como elemento más importante de la web: portada, trailer, screenshots, plataformas y enlaces a wishlist.</p>
+        <p>
+          The main showcase of Game Dan Team: cover art, trailers, screenshots,
+          platforms and wishlist links.
+        </p>
       </section>
+
       <section className="section games-grid">
-        {games.map((game) => <GameCard key={game.title} game={game} />)}
+        {games.map((game) => (
+          <GameCard key={game.title} game={game} />
+        ))}
       </section>
     </main>
   );
