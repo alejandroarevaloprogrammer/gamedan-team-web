@@ -1,4 +1,4 @@
-import { GameCard } from '@/components/GameCard';
+import { GameCard } from '@/components/games/GameCard/GameCard';
 import { games } from '@/components/games';
 
 export default function GamesPage() {

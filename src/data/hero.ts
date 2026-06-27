@@ -1,21 +1,7 @@
 export const hero = {
-  eyebrow: "Indie Studio · Anime Visual Novels",
-
-  title: [
-    "Stories",
-    "that glow",
-    "after midnight.",
-  ],
+  brandName: "GameDan Team",
+  tagline: "Enjoy your gaming lifestyle.",
 
   description:
-    "Emotional stories, unforgettable characters and beautiful anime-inspired worlds.",
-
-  primaryButton: {
-    text: "Explore Games",
-    href: "/games",
-  },
-
-  secondaryButton: {
-    text: "Watch Trailer",
-  },
+    "An independent game development studio creating memorable retro and anime-inspired games.",
 };
