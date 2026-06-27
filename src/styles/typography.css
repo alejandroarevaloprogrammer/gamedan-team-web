@@ -11,11 +11,11 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3.6rem, 9vw, 8.8rem);
+  font-size: clamp(3.7rem, 8vw, 8rem);
 }
 
 h2 {
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
 }
 
 h3 {

@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 import { BackgroundFX } from "@/components/ui/BackgroundFX/BackgroundFX";
-import { Navbar } from '@/components/layout/Navbar/Navbar';
-import { Footer } from '@/components/layout/Footer/Footer';
-import './globals.css';
+import { Footer } from "@/components/layout/Footer/Footer";
+import { Navbar } from "@/components/layout/Navbar/Navbar";
+import { brand } from "@/config/brand";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Game Dan Team',
-  description: 'Indie games and anime visual novels by Game Dan Team.',
+  title: brand.name,
+  description: brand.description,
 };
 
 export default function RootLayout({
@@ -18,9 +19,7 @@ export default function RootLayout({
         <div className="site-shell">
           <BackgroundFX />
           <Navbar />
-
           {children}
-
           <Footer />
         </div>
       </body>

@@ -2,40 +2,42 @@
   position: sticky;
   top: 0;
   z-index: 20;
-
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
   padding: 1.1rem 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-
   backdrop-filter: blur(18px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-
+  gap: 0.8rem;
   font-weight: 900;
 }
 
-.brandMark {
+.brandIcon {
   display: inline-flex;
-  width: 46px;
-  height: 46px;
-
+  width: 48px;
+  height: 48px;
   align-items: center;
   justify-content: center;
-
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
-  background: var(--gradient-main);
-  color: var(--bg-main);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 24px rgba(255, 98, 187, 0.18);
+}
 
-  box-shadow: var(--shadow-pink);
+.brandIcon img {
+  image-rendering: pixelated;
+}
+
+.brandName {
+  color: var(--text-main);
+  letter-spacing: -0.02em;
 }
 
 .nav {
@@ -47,10 +49,7 @@
 .nav a {
   color: var(--text-muted);
   font-weight: 800;
-
-  transition:
-    color var(--transition-fast),
-    text-shadow var(--transition-fast);
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
 .nav a:hover {

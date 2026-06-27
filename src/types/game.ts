@@ -48,20 +48,13 @@ export type Game = {
   id: string;
   slug: string;
   title: string;
-
   featured: boolean;
-
   status: GameStatus;
   platforms: GamePlatform[];
-
   genres: string[];
-
   shortDescription: string;
   description: string;
-
   media: GameMedia;
-
   links: GameLinks;
-
   releaseYear?: number;
 };

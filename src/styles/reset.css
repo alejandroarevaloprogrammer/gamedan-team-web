@@ -18,7 +18,7 @@ body {
 
 body {
   min-height: 100vh;
-  background: var(--gradient-bg);
+  background: var(--bg-main);
   color: var(--text-main);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -61,21 +61,4 @@ ol {
 ::selection {
   background: var(--color-primary);
   color: var(--bg-main);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-secondary);
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary);
 }
