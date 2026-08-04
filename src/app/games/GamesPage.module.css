@@ -2,25 +2,25 @@
   width: 100%;
 }
 
-.hero,
-.library {
-  width: min(calc(100% - 2rem), var(--container));
-  margin-inline: auto;
-}
+/* ==========================================================
+   PAGE HERO
+========================================================== */
 
 .hero {
-  min-height: 56vh;
+  width: min(calc(100% - 2rem), var(--container));
+  min-height: 58vh;
+  margin-inline: auto;
   padding: clamp(5rem, 10vw, 9rem) 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   gap: 1.15rem;
 }
 
 .hero h1 {
   max-width: 900px;
-  text-transform: uppercase;
 }
 
 .intro {
@@ -30,11 +30,43 @@
   line-height: 1.75;
 }
 
-.library {
-  padding: 0 0 var(--space-2xl);
+.total {
+  margin-top: 0.4rem;
+  padding: 0.55rem 0.9rem;
+
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--color-highlight);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(12px);
 }
 
-.header {
+/* ==========================================================
+   GAME LIBRARY
+========================================================== */
+
+.library {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding-bottom: var(--space-2xl);
+
+  display: grid;
+  gap: clamp(5rem, 10vw, 8rem);
+}
+
+.librarySection {
+  scroll-margin-top: 7rem;
+}
+
+.sectionHeader {
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
 
   display: flex;
@@ -43,13 +75,17 @@
   gap: 2rem;
 }
 
-.header > div {
+.sectionHeader > div {
   display: grid;
   gap: 0.9rem;
 }
 
-.header h2 {
-  max-width: 740px;
+.sectionHeader h2 {
+  max-width: 760px;
+}
+
+.sectionDescription {
+  max-width: 680px;
 }
 
 .count {
@@ -63,9 +99,10 @@
   background: rgba(255, 255, 255, 0.045);
   color: var(--color-highlight);
 
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.08em;
+  line-height: 1;
   text-transform: uppercase;
 
   backdrop-filter: blur(12px);
@@ -77,6 +114,10 @@
   gap: 1.25rem;
 }
 
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
 @media (max-width: 980px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -86,14 +127,15 @@
 @media (max-width: 700px) {
   .hero {
     min-height: auto;
-    padding: 4rem 0;
+    padding: 4rem 0 5rem;
   }
 
   .library {
     padding-bottom: var(--space-xl);
+    gap: var(--space-xl);
   }
 
-  .header {
+  .sectionHeader {
     align-items: flex-start;
     flex-direction: column;
   }
