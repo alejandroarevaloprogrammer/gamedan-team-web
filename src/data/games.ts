@@ -108,4 +108,45 @@ export const games: Game[] = [
 
     distribution: {},
   },
+
+  {
+  id: "memory-hand",
+  slug: "memory-hand",
+  title: "Memory Hand",
+
+  featured: false,
+
+  status: "in-development",
+
+  platforms: ["windows"],
+
+  genres: ["Retro", "Casual", "Memory"],
+
+  shortDescription:
+    "Test your memory with a retro rock-paper-scissors challenge.",
+
+  description:
+    "Test your memory by clearing all 30 levels of this retro-inspired challenge. Memorize the characters, sharpen your concentration and discover a fun new twist on the classic rock-paper-scissors game.",
+
+  media: {
+    cover: "/games/memory-hand/cover.png",
+
+    trailer: {
+      type: "youtube",
+      url: "https://www.youtube.com/watch?v=tusM0QiwaWw",
+      embedUrl: "https://www.youtube.com/embed/tusM0QiwaWw",
+    },
+
+    screenshots: [
+      "/games/memory-hand/screenshots/01.png",
+      "/games/memory-hand/screenshots/02.png",
+      "/games/memory-hand/screenshots/03.png",
+      "/games/memory-hand/screenshots/04.png",
+      "/games/memory-hand/screenshots/05.png",
+      "/games/memory-hand/screenshots/06.png",
+    ],
+  },
+
+  distribution: {},
+}
 ];
