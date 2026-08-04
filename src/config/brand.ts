@@ -8,6 +8,15 @@ export const brand = {
   website: "https://www.gamedanteam.com",
   repository: "gamedan-team-web",
   email: "gamedanteam@gmail.com",
+  social: {
+  youtube: "https://www.youtube.com/@gamedanteam",
+  instagram: "https://www.instagram.com/gamedanteam/",
+  x: "https://x.com/GameDanTeam",
+  steam: "https://steamcommunity.com/id/gamedanteam/",
+  itch: "https://gamedanteam.itch.io/",
+  bandcamp: "https://gamedanteam.bandcamp.com/",
+  soundcloud: "https://soundcloud.com/gamedanteam",
+},
   assets: {
     logo: "/brand/logo.png",
     icon: "/brand/icon.png",

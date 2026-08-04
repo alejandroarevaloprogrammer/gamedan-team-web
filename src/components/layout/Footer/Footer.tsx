@@ -1,10 +1,104 @@
+import Link from "next/link";
+
+import { SocialIcon } from "@/components/ui/SocialIcon";
 import { brand } from "@/config/brand";
+import { getFeaturedGame } from "@/lib/games";
+
 import styles from "./Footer.module.css";
 
+const startingYear = 2019;
+const currentYear = new Date().getFullYear();
+
 export function Footer() {
+  const featuredGame = getFeaturedGame();
+
   return (
     <footer className={styles.footer}>
-      <p>© 2026 {brand.name} · {brand.tagline}</p>
+      <div className={styles.grid}>
+        <div className={styles.brandColumn}>
+          <h3>{brand.name}</h3>
+
+          <p>{brand.description}</p>
+        </div>
+
+        <div className={styles.column}>
+          <h4>Navigation</h4>
+
+          <nav aria-label="Footer navigation">
+            <Link href="/">Home</Link>
+            <Link href="/games">Games</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+          </nav>
+        </div>
+
+        <div className={styles.column}>
+          <h4>Discover</h4>
+
+          <nav aria-label="Discover GameDan Team">
+            <Link href="/games">Game Library</Link>
+
+            <Link href={`/games/${featuredGame.slug}`}>
+              Featured Game
+            </Link>
+
+            <Link href="/games">Released Games</Link>
+
+            <Link href="/games">Games in Development</Link>
+          </nav>
+        </div>
+
+        <div className={styles.column}>
+          <h4>Follow</h4>
+
+          <nav aria-label="Follow GameDan Team">
+            <a
+              href={brand.social.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialIcon name="youtube" />
+              <span>YouTube</span>
+            </a>
+
+            <a
+              href={brand.social.steam}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialIcon name="steam" />
+              <span>Steam</span>
+            </a>
+
+            <a
+              href={brand.social.x}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialIcon name="x" />
+              <span>X</span>
+            </a>
+
+            <a
+              href={brand.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialIcon name="instagram" />
+              <span>Instagram</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <div className={styles.bottom}>
+        <p>
+          © {startingYear}–{currentYear} {brand.name}. All rights
+          reserved.
+        </p>
+
+        <p className={styles.tagline}>{brand.tagline}</p>
+      </div>
     </footer>
   );
 }
