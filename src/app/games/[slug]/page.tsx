@@ -5,6 +5,10 @@ import { notFound } from "next/navigation";
 
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
+import type {
+  GamePlatform,
+  GameStatus,
+} from "@/types/game";
 
 import styles from "./GameDetail.module.css";
 
@@ -14,27 +18,23 @@ type GamePageProps = {
   }>;
 };
 
-function formatStatus(status: string): string {
-  return status
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
+const statusLabels: Record<GameStatus, string> = {
+  released: "Released",
+  "in-development": "In Development",
+  prototype: "Prototype",
+  "coming-soon": "Coming Soon",
+};
 
-function formatPlatform(platform: string): string {
-  const platformNames: Record<string, string> = {
-    windows: "Windows",
-    mac: "macOS",
-    linux: "Linux",
-    web: "HTML5",
-    android: "Android",
-    ios: "iOS",
-    steam: "Steam",
-    itch: "itch.io",
-  };
-
-  return platformNames[platform] ?? platform;
-}
+const platformLabels: Record<GamePlatform, string> = {
+  windows: "Windows",
+  mac: "macOS",
+  linux: "Linux",
+  web: "HTML5",
+  android: "Android",
+  ios: "iOS",
+  steam: "Steam",
+  itch: "itch.io",
+};
 
 export function generateStaticParams() {
   return getAllGames().map((game) => ({
@@ -60,7 +60,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function GamePage({ params }: GamePageProps) {
+export default async function GamePage({
+  params,
+}: GamePageProps) {
   const { slug } = await params;
   const game = getGameBySlug(slug);
 
@@ -76,89 +78,136 @@ export default async function GamePage({ params }: GamePageProps) {
         className={styles.hero}
         aria-labelledby="game-detail-title"
       >
-        <div className={styles.media}>
+        <div className={styles.heroBackground}>
           <Image
             src={game.media.cover}
-            alt={`${game.title} cover art`}
+            alt=""
             fill
             priority
-            sizes="(max-width: 900px) 100vw, 58vw"
-            className={styles.cover}
+            sizes="100vw"
+            className={styles.backgroundImage}
           />
 
-          <div className={styles.overlay} />
-
-          <span className={styles.status}>
-            {formatStatus(game.status)}
-          </span>
+          <div className={styles.backgroundOverlay} />
+          <div className={styles.backgroundGlow} />
         </div>
 
-        <div className={styles.content}>
-          <Link href="/games" className={styles.backLink}>
-            <span aria-hidden="true">←</span>
-            All games
-          </Link>
+        <div className={styles.heroInner}>
+          <div className={styles.coverPanel}>
+            <div className={styles.coverFrame}>
+              <Image
+                src={game.media.cover}
+                alt={`${game.title} cover art`}
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 54vw"
+                className={styles.coverImage}
+              />
 
-          <p className="eyebrow">{game.genres.join(" · ")}</p>
+              <div className={styles.coverOverlay} />
+            </div>
+          </div>
 
-          <h1 id="game-detail-title">{game.title}</h1>
+          <div className={styles.content}>
+            <Link href="/games" className={styles.backLink}>
+              <span aria-hidden="true">←</span>
+              All games
+            </Link>
 
-          <p className={styles.description}>{game.description}</p>
+            <div className={styles.statusRow}>
+              <span
+                className={styles.statusBadge}
+                data-status={game.status}
+              >
+                <span
+                  className={styles.statusDot}
+                  aria-hidden="true"
+                />
 
-          <dl className={styles.details}>
-            <div>
-              <dt>Status</dt>
-              <dd>{formatStatus(game.status)}</dd>
+                {statusLabels[game.status]}
+              </span>
             </div>
 
-            <div>
-              <dt>Platforms</dt>
-              <dd>
-                {game.platforms.map(formatPlatform).join(" · ")}
-              </dd>
+            <h1 id="game-detail-title">{game.title}</h1>
+
+            <p className={styles.shortDescription}>
+              {game.shortDescription}
+            </p>
+
+            <div
+              className={styles.badgeGroup}
+              aria-label="Game genres"
+            >
+              {game.genres.map((genre) => (
+                <span className={styles.genreBadge} key={genre}>
+                  {genre}
+                </span>
+              ))}
+            </div>
+
+            <p className={styles.description}>
+              {game.description}
+            </p>
+
+            <div className={styles.platformBlock}>
+              <p className={styles.metaLabel}>Available for</p>
+
+              <div
+                className={styles.badgeGroup}
+                aria-label="Game platforms"
+              >
+                {game.platforms.map((platform) => (
+                  <span
+                    className={styles.platformBadge}
+                    key={platform}
+                  >
+                    {platformLabels[platform]}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {game.releaseYear && (
-              <div>
-                <dt>Release year</dt>
-                <dd>{game.releaseYear}</dd>
-              </div>
-            )}
-          </dl>
-
-          <div className={styles.actions}>
-            {game.links.steam && (
-              <a
-                href={game.links.steam}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.primaryAction}
-              >
-                View on Steam
-              </a>
+              <p className={styles.releaseYear}>
+                Released in {game.releaseYear}
+              </p>
             )}
 
-            {game.links.itch && (
-              <a
-                href={game.links.itch}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.primaryAction}
-              >
-                Play on itch.io
-              </a>
-            )}
+            <div className={styles.actions}>
+              {game.links.steam && (
+                <a
+                  href={game.links.steam}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.primaryAction}
+                >
+                  View on Steam
+                </a>
+              )}
 
-            {trailer && (
-              <a
-                href={trailer.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.secondaryAction}
-              >
-                Watch trailer
-              </a>
-            )}
+              {game.links.itch && (
+                <a
+                  href={game.links.itch}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.primaryAction}
+                >
+                  Play on itch.io
+                </a>
+              )}
+
+              {trailer && (
+                <a
+                  href={trailer.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.secondaryAction}
+                >
+                  <span aria-hidden="true">▶</span>
+                  Watch trailer
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -172,21 +221,31 @@ export default async function GamePage({ params }: GamePageProps) {
             <div className={styles.galleryHeader}>
               <p className="eyebrow">Gallery</p>
               <h2 id="screenshots-title">Screenshots</h2>
+
+              <p>
+                A closer look at the world, characters and gameplay
+                of {game.title}.
+              </p>
             </div>
 
             <div className={styles.gallery}>
-              {game.media.screenshots.map((screenshot, index) => (
-              <div className={styles.screenshot} key={screenshot}>
-                <Image
-                  src={screenshot}
-                  alt={`${game.title} screenshot ${index + 1}`}
-                  width={1600}
-                  height={900}
-                  sizes="(max-width: 700px) 100vw, 50vw"
-                  className={styles.screenshotImage}
-                />
-              </div>
-              ))}
+              {game.media.screenshots.map(
+                (screenshot, index) => (
+                  <div
+                    className={styles.screenshot}
+                    key={screenshot}
+                  >
+                    <Image
+                      src={screenshot}
+                      alt={`${game.title} screenshot ${index + 1}`}
+                      width={1600}
+                      height={900}
+                      sizes="(max-width: 700px) 100vw, 50vw"
+                      className={styles.screenshotImage}
+                    />
+                  </div>
+                ),
+              )}
             </div>
           </section>
         )}
