@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { GameTrailer } from "@/components/games/GameTrailer";
+import { GameGallery } from "@/components/games/GameGallery";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 import type {
@@ -261,7 +262,7 @@ export default async function GamePage({
         </div>
       </section>
 
-      {trailer && (
+            {trailer && (
         <GameTrailer
           gameTitle={game.title}
           trailer={trailer}
@@ -270,43 +271,12 @@ export default async function GamePage({
 
       {game.media.screenshots &&
         game.media.screenshots.length > 0 && (
-          <section
-            className={styles.gallerySection}
-            aria-labelledby="screenshots-title"
-          >
-            <div className={styles.galleryHeader}>
-              <p className="eyebrow">Gallery</p>
-
-              <h2 id="screenshots-title">
-                Screenshots
-              </h2>
-
-              <p>
-                A closer look at the world, characters and
-                gameplay of {game.title}.
-              </p>
-            </div>
-
-            <div className={styles.gallery}>
-              {game.media.screenshots.map(
-                (screenshot, index) => (
-                  <div
-                    className={styles.screenshot}
-                    key={screenshot}
-                  >
-                    <Image
-                      src={screenshot}
-                      alt={`${game.title} screenshot ${index + 1}`}
-                      width={1600}
-                      height={900}
-                      sizes="(max-width: 700px) 100vw, 50vw"
-                      className={styles.screenshotImage}
-                    />
-                  </div>
-                ),
-              )}
-            </div>
-          </section>
+          <GameGallery
+            gameTitle={game.title}
+            screenshots={
+              game.media.screenshots
+            }
+          />
         )}
     </main>
   );

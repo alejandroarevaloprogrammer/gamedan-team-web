@@ -22,12 +22,6 @@ export const games: Game[] = [
     media: {
       cover: "/games/ona-bar/cover.png",
 
-      trailer: {
-        type: "youtube",
-        url: "https://www.youtube.com/watch?v=tusM0QiwaWw",
-        embedUrl: "https://www.youtube.com/embed/tusM0QiwaWw",
-      },
-
       screenshots: [
         "/games/ona-bar/screenshots/01.png",
         "/games/ona-bar/screenshots/02.png",
