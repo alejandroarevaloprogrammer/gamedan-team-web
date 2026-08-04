@@ -223,7 +223,6 @@
 
 .screenshot {
   position: relative;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
 
   border: 1px solid var(--border-soft);
@@ -235,7 +234,9 @@
 }
 
 .screenshotImage {
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 920px) {

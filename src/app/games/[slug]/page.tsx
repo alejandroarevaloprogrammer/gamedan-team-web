@@ -176,15 +176,16 @@ export default async function GamePage({ params }: GamePageProps) {
 
             <div className={styles.gallery}>
               {game.media.screenshots.map((screenshot, index) => (
-                <div className={styles.screenshot} key={screenshot}>
-                  <Image
-                    src={screenshot}
-                    alt={`${game.title} screenshot ${index + 1}`}
-                    fill
-                    sizes="(max-width: 700px) 100vw, 50vw"
-                    className={styles.screenshotImage}
-                  />
-                </div>
+              <div className={styles.screenshot} key={screenshot}>
+                <Image
+                  src={screenshot}
+                  alt={`${game.title} screenshot ${index + 1}`}
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 700px) 100vw, 50vw"
+                  className={styles.screenshotImage}
+                />
+              </div>
               ))}
             </div>
           </section>
