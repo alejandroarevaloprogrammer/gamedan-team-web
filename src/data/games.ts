@@ -28,7 +28,10 @@ export const games: Game[] = [
         embedUrl: "https://www.youtube.com/embed/tusM0QiwaWw",
       },
 
-      screenshots: [],
+      screenshots: [
+        "/games/ona-bar/screenshots/01.png",
+        "/games/ona-bar/screenshots/02.png",
+      ],
     },
 
     links: {
@@ -56,7 +59,14 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/distance-of-love/cover.png",
-      screenshots: [],
+      screenshots: [
+        "/games/distance-of-love/screenshots/01.png",
+        "/games/distance-of-love/screenshots/02.png",
+        "/games/distance-of-love/screenshots/03.png",
+        "/games/distance-of-love/screenshots/04.png",
+        "/games/distance-of-love/screenshots/05.png",
+        "/games/distance-of-love/screenshots/06.png",
+      ],
     },
 
     links: {
@@ -84,7 +94,14 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/downriver-ride/cover.png",
-      screenshots: [],
+      screenshots: [
+        "/games/downriver-ride/screenshots/01.png",
+        "/games/downriver-ride/screenshots/02.png",
+        "/games/downriver-ride/screenshots/03.png",
+        "/games/downriver-ride/screenshots/04.png",
+        "/games/downriver-ride/screenshots/05.png",
+        "/games/downriver-ride/screenshots/06.png",
+      ],
     },
 
     links: {},
