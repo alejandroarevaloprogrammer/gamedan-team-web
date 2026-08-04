@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { GameTrailer } from "@/components/games/GameTrailer";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 import type {
@@ -248,9 +249,7 @@ export default async function GamePage({
 
               {trailer && (
                 <a
-                  href={trailer.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#trailer"
                   className={styles.secondaryAction}
                 >
                   <span aria-hidden="true">▶</span>
@@ -261,6 +260,13 @@ export default async function GamePage({
           </div>
         </div>
       </section>
+
+      {trailer && (
+        <GameTrailer
+          gameTitle={game.title}
+          trailer={trailer}
+        />
+      )}
 
       {game.media.screenshots &&
         game.media.screenshots.length > 0 && (

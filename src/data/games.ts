@@ -134,7 +134,8 @@ export const games: Game[] = [
     trailer: {
       type: "youtube",
       url: "https://www.youtube.com/watch?v=tusM0QiwaWw",
-      embedUrl: "https://www.youtube.com/embed/tusM0QiwaWw",
+      embedUrl:
+        "https://www.youtube-nocookie.com/embed/tusM0QiwaWw?rel=0",
     },
 
     screenshots: [
