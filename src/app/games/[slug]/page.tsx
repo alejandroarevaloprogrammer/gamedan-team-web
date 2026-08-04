@@ -32,8 +32,9 @@ const platformLabels: Record<GamePlatform, string> = {
   web: "HTML5",
   android: "Android",
   ios: "iOS",
-  steam: "Steam",
-  itch: "itch.io",
+  switch: "Nintendo Switch",
+  playstation: "PlayStation",
+  xbox: "Xbox",
 };
 
 export function generateStaticParams() {
@@ -139,7 +140,10 @@ export default async function GamePage({
               aria-label="Game genres"
             >
               {game.genres.map((genre) => (
-                <span className={styles.genreBadge} key={genre}>
+                <span
+                  className={styles.genreBadge}
+                  key={genre}
+                >
                   {genre}
                 </span>
               ))}
@@ -150,7 +154,9 @@ export default async function GamePage({
             </p>
 
             <div className={styles.platformBlock}>
-              <p className={styles.metaLabel}>Available for</p>
+              <p className={styles.metaLabel}>
+                Available for
+              </p>
 
               <div
                 className={styles.badgeGroup}
@@ -167,16 +173,25 @@ export default async function GamePage({
               </div>
             </div>
 
-            {game.releaseYear && (
+            {game.releaseDate && (
               <p className={styles.releaseYear}>
-                Released in {game.releaseYear}
+                Release date: {game.releaseDate}
               </p>
             )}
 
             <div className={styles.actions}>
-              {game.links.steam && (
+              {game.distribution.internalPlayUrl && (
+                <Link
+                  href={game.distribution.internalPlayUrl}
+                  className={styles.primaryAction}
+                >
+                  Play now
+                </Link>
+              )}
+
+              {game.distribution.steamUrl && (
                 <a
-                  href={game.links.steam}
+                  href={game.distribution.steamUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.primaryAction}
@@ -185,14 +200,49 @@ export default async function GamePage({
                 </a>
               )}
 
-              {game.links.itch && (
+              {game.distribution.itchUrl && (
                 <a
-                  href={game.links.itch}
+                  href={game.distribution.itchUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={
+                    game.distribution.internalPlayUrl
+                      ? styles.secondaryAction
+                      : styles.primaryAction
+                  }
+                >
+                  View on itch.io
+                </a>
+              )}
+
+              {game.distribution.downloadUrl && (
+                <a
+                  href={game.distribution.downloadUrl}
                   className={styles.primaryAction}
                 >
-                  Play on itch.io
+                  Download
+                </a>
+              )}
+
+              {game.distribution.websiteUrl && (
+                <a
+                  href={game.distribution.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.secondaryAction}
+                >
+                  Official website
+                </a>
+              )}
+
+              {game.distribution.pressKitUrl && (
+                <a
+                  href={game.distribution.pressKitUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.secondaryAction}
+                >
+                  Press kit
                 </a>
               )}
 
@@ -220,11 +270,14 @@ export default async function GamePage({
           >
             <div className={styles.galleryHeader}>
               <p className="eyebrow">Gallery</p>
-              <h2 id="screenshots-title">Screenshots</h2>
+
+              <h2 id="screenshots-title">
+                Screenshots
+              </h2>
 
               <p>
-                A closer look at the world, characters and gameplay
-                of {game.title}.
+                A closer look at the world, characters and
+                gameplay of {game.title}.
               </p>
             </div>
 

@@ -11,8 +11,9 @@ export type GamePlatform =
   | "web"
   | "android"
   | "ios"
-  | "steam"
-  | "itch";
+  | "switch"
+  | "playstation"
+  | "xbox";
 
 export type GameTrailer =
   | {
@@ -36,25 +37,32 @@ export type GameMedia = {
   trailer?: GameTrailer;
 };
 
-export type GameLinks = {
-  steam?: string;
-  itch?: string;
-  website?: string;
-  youtube?: string;
-  pressKit?: string;
+export type GameDistribution = {
+  internalPlayUrl?: string;
+  steamUrl?: string;
+  itchUrl?: string;
+  websiteUrl?: string;
+  downloadUrl?: string;
+  pressKitUrl?: string;
 };
 
 export type Game = {
   id: string;
   slug: string;
   title: string;
+
   featured: boolean;
+
   status: GameStatus;
   platforms: GamePlatform[];
+
   genres: string[];
+
   shortDescription: string;
   description: string;
+
   media: GameMedia;
-  links: GameLinks;
-  releaseYear?: number;
+  distribution: GameDistribution;
+
+  releaseDate?: string;
 };

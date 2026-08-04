@@ -10,7 +10,7 @@ export const games: Game[] = [
 
     status: "in-development",
 
-    platforms: ["windows", "steam"],
+    platforms: ["windows"],
 
     genres: ["Visual Novel", "Anime"],
 
@@ -34,9 +34,7 @@ export const games: Game[] = [
       ],
     },
 
-    links: {
-      youtube: "https://www.youtube.com/watch?v=tusM0QiwaWw",
-    },
+    distribution: {},
   },
 
   {
@@ -48,7 +46,7 @@ export const games: Game[] = [
 
     status: "released",
 
-    platforms: ["web", "itch"],
+    platforms: ["web"],
 
     genres: ["Kinetic Novel", "Anime"],
 
@@ -59,6 +57,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/distance-of-love/cover.png",
+
       screenshots: [
         "/games/distance-of-love/screenshots/01.png",
         "/games/distance-of-love/screenshots/02.png",
@@ -69,9 +68,11 @@ export const games: Game[] = [
       ],
     },
 
-    links: {
-      itch: "https://gamedanteam.itch.io/distance-of-love",
+    distribution: {
+      itchUrl: "https://gamedanteam.itch.io/distance-of-love",
     },
+
+    releaseDate: "2021",
   },
 
   {
@@ -83,7 +84,7 @@ export const games: Game[] = [
 
     status: "in-development",
 
-    platforms: ["windows", "steam"],
+    platforms: ["windows"],
 
     genres: ["Retro", "Casual", "Arcade"],
 
@@ -94,6 +95,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/downriver-ride/cover.png",
+
       screenshots: [
         "/games/downriver-ride/screenshots/01.png",
         "/games/downriver-ride/screenshots/02.png",
@@ -104,6 +106,6 @@ export const games: Game[] = [
       ],
     },
 
-    links: {},
+    distribution: {},
   },
 ];
