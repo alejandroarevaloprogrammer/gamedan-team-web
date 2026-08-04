@@ -1,39 +1,87 @@
+import type { Metadata } from "next";
+
+import { brand } from "@/config/brand";
+
+import { ContactForm } from "./ContactForm";
+import styles from "./ContactPage.module.css";
+
+export const metadata: Metadata = {
+  title: `Contact | ${brand.name}`,
+  description:
+    "Contact GameDan Team for general questions, collaborations, press enquiries and information about our games.",
+};
+
 export default function ContactPage() {
   return (
-    <main>
-      <section className="page-hero">
+    <main className={styles.main}>
+      <section
+        className={styles.hero}
+        aria-labelledby="contact-title"
+      >
         <p className="eyebrow">Contact</p>
-        <h1>Let’s talk</h1>
-        <p>
-          A visual contact section prepared for press, players, publishers,
-          collaborations and demo feedback.
+
+        <h1 id="contact-title">
+          Let&apos;s talk about games.
+        </h1>
+
+        <p className={styles.heroText}>
+          Contact GameDan Team for general questions,
+          collaborations, press enquiries or information about
+          our projects.
         </p>
       </section>
 
-      <section className="section contact-layout">
-        <div className="info-card">
-          <h2>Press, players & publishers</h2>
-          <p>
-            Reach out for press, collaborations, publishing opportunities,
-            events or feedback.
-          </p>
+      <section
+        className={styles.contactSection}
+        aria-labelledby="contact-form-title"
+      >
+        <aside className={styles.information}>
+          <div>
+            <p className="eyebrow">Get in Touch</p>
 
-          <div className="contact-actions">
-            <a className="text-link" href="mailto:hello@gamedanteam.com">
-              hello@gamedanteam.com
-            </a>
+            <h2>We would love to hear from you.</h2>
+
+            <p>
+              Whether you are a player, developer, creator or
+              member of the press, you can send us a message
+              using the form.
+            </p>
           </div>
-        </div>
 
-        <div className="contact-panel">
-          <form>
-            <input placeholder="Name" aria-label="Name" />
-            <input placeholder="Email" aria-label="Email" type="email" />
-            <textarea placeholder="Message" aria-label="Message" />
-            <button className="button" type="button">
-              Send message
-            </button>
-          </form>
+          <div className={styles.contactDetails}>
+            <div className={styles.contactItem}>
+              <p className={styles.contactLabel}>Email</p>
+
+              <a href={`mailto:${brand.email}`}>
+                {brand.email}
+              </a>
+            </div>
+
+            <div className={styles.contactItem}>
+              <p className={styles.contactLabel}>
+                Typical enquiries
+              </p>
+
+              <ul>
+                <li>General questions</li>
+                <li>Business and collaborations</li>
+                <li>Press and content creators</li>
+                <li>Game support</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div className={styles.formPanel}>
+          <div className={styles.formHeader}>
+            <p className="eyebrow">Send a Message</p>
+
+            <h2 id="contact-form-title">
+              How can we help?
+            </h2>
+          </div>
+
+          <ContactForm />
         </div>
       </section>
     </main>
