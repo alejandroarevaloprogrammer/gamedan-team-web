@@ -1,0 +1,343 @@
+.main {
+  width: 100%;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+  width: min(calc(100% - 2rem), var(--container));
+  min-height: calc(82vh - 90px);
+  margin-inline: auto;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+
+.hero h1 {
+  max-width: 1050px;
+
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  line-height: 0.95;
+}
+
+.heroText {
+  max-width: 720px;
+
+  color: var(--text-soft);
+
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   BRAND MARK
+========================================================== */
+
+.brandMark {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding: clamp(2rem, 6vw, 5rem) 0 clamp(5rem, 9vw, 8rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoGlow {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoGlow::before {
+  content: "";
+  position: absolute;
+
+  width: 125%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 98, 187, 0.2) 0%,
+      rgba(179, 49, 241, 0.12) 38%,
+      transparent 70%
+    );
+
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.logoImage {
+  position: relative;
+  z-index: 1;
+
+  width: clamp(220px, 28vw, 340px);
+  height: auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 22px rgba(255, 98, 187, 0.24))
+    drop-shadow(0 0 38px rgba(179, 49, 241, 0.18));
+}
+
+/* ==========================================================
+   GENERAL SECTIONS
+========================================================== */
+
+.section {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding: clamp(5rem, 9vw, 8rem) 0;
+
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(2rem, 8vw, 8rem);
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.sectionLabel {
+  padding-top: 0.4rem;
+}
+
+.sectionContent {
+  max-width: 850px;
+
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sectionContent h2 {
+  max-width: 800px;
+}
+
+.sectionContent > p {
+  max-width: 720px;
+
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   GAME TYPES
+========================================================== */
+
+.genreList {
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.genreList span {
+  padding: 0.65rem 0.95rem;
+
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text-main);
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   VALUES
+========================================================== */
+
+.valuesSection {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding: clamp(5rem, 9vw, 8rem) 0;
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.valuesHeader {
+  max-width: 820px;
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+
+  display: grid;
+  gap: 1rem;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.value {
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.valueNumber {
+  display: block;
+  margin-bottom: 2rem;
+
+  color: var(--color-soft);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.value h3 {
+  margin-bottom: 1rem;
+
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.value p {
+  line-height: 1.75;
+}
+
+/* ==========================================================
+   BELIEFS
+========================================================== */
+
+.beliefsSection {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(2rem, 8vw, 8rem);
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.beliefs {
+  max-width: 900px;
+}
+
+.beliefs h2 {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.statements {
+  display: grid;
+}
+
+.statements p {
+  padding: 1.25rem 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  color: var(--text-main);
+
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.statements p:first-child {
+  border-top: 1px solid var(--border-soft);
+}
+
+.statements .highlightStatement {
+  color: var(--color-highlight);
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.cta {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+  padding: clamp(6rem, 12vw, 11rem) 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.3rem;
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.cta h2 {
+  max-width: 900px;
+}
+
+.cta > p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin-bottom: 0.5rem;
+
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.75;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+  .section,
+  .beliefsSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 4.5rem 0 6rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 1;
+  }
+
+  .brandMark {
+    padding: 1rem 0 4.5rem;
+  }
+
+  .logoImage {
+    width: min(220px, 68vw);
+  }
+
+  .section,
+  .valuesSection,
+  .beliefsSection {
+    padding: 4.5rem 0;
+  }
+
+  .cta {
+    padding: 5rem 0;
+  }
+
+  .genreList {
+    gap: 0.55rem;
+  }
+
+  .genreList span {
+    font-size: 0.7rem;
+  }
+}
