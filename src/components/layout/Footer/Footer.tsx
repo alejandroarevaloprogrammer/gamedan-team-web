@@ -35,16 +35,25 @@ export function Footer() {
         <div className={styles.column}>
           <h4>Discover</h4>
 
-          <nav aria-label="Discover GameDan Team">
-            <Link href="/games">Game Library</Link>
+          <nav
+            className={styles.links}
+            aria-label="Discover GameDan Team"
+          >
+            <Link href="/games#game-library">
+              Game Library
+            </Link>
 
-            <Link href={`/games/${featuredGame.slug}`}>
+            <Link href="/games#featured-game">
               Featured Game
             </Link>
 
-            <Link href="/games">Released Games</Link>
+            <Link href="/games#released-games">
+              Released Games
+            </Link>
 
-            <Link href="/games">Games in Development</Link>
+            <Link href="/games#in-development">
+              Games in Development
+            </Link>
           </nav>
         </div>
 

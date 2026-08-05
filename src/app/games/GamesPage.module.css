@@ -66,6 +66,10 @@
   scroll-margin-top: 7rem;
 }
 
+.library {
+  scroll-margin-top: 7rem;
+}
+
 .sectionHeader {
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
 

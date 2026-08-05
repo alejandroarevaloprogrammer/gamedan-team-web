@@ -1,7 +1,6 @@
 export type GameStatus =
   | "released"
   | "in-development"
-  | "prototype"
   | "coming-soon";
 
 export type GamePlatform =

@@ -5,6 +5,7 @@ import type { Game } from "@/types/game";
 import styles from "./GamesPage.module.css";
 
 type GameSectionProps = {
+  id: string;
   title: string;
   eyebrow: string;
   description: string;
@@ -12,6 +13,7 @@ type GameSectionProps = {
 };
 
 function GameSection({
+  id,
   title,
   eyebrow,
   description,
@@ -23,16 +25,15 @@ function GameSection({
 
   return (
     <section
+      id={id}
       className={styles.librarySection}
-      aria-labelledby={`${eyebrow.toLowerCase().replaceAll(" ", "-")}-title`}
+      aria-labelledby={`${id}-title`}
     >
       <div className={styles.sectionHeader}>
         <div>
           <p className="eyebrow">{eyebrow}</p>
 
-          <h2
-            id={`${eyebrow.toLowerCase().replaceAll(" ", "-")}-title`}
-          >
+          <h2 id={`${id}-title`}>
             {title}
           </h2>
 
@@ -48,7 +49,10 @@ function GameSection({
 
       <div className={styles.grid}>
         {games.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCard
+            key={game.id}
+            game={game}
+          />
         ))}
       </div>
     </section>
@@ -58,11 +62,14 @@ function GameSection({
 export default function GamesPage() {
   const games = getAllGames();
 
-  const featuredGames = games.filter((game) => game.featured);
+  const featuredGames = games.filter(
+    (game) => game.featured,
+  );
 
   const inDevelopmentGames = games.filter(
     (game) =>
-      game.status === "in-development" && !game.featured,
+      game.status === "in-development" &&
+      !game.featured,
   );
 
   const releasedGames = games.filter(
@@ -73,13 +80,12 @@ export default function GamesPage() {
     (game) => game.status === "coming-soon",
   );
 
-  const prototypeGames = games.filter(
-    (game) => game.status === "prototype",
-  );
-
   return (
     <main className={styles.main}>
-      <section className={styles.hero}>
+      <section
+        id="game-library"
+        className={styles.hero}
+      >
         <p className="eyebrow">Game Library</p>
 
         <h1>Our Games</h1>
@@ -98,6 +104,7 @@ export default function GamesPage() {
 
       <div className={styles.library}>
         <GameSection
+          id="featured-game"
           eyebrow="Featured Game"
           title="Our current highlight."
           description="The project currently at the centre of GameDan Team."
@@ -105,6 +112,7 @@ export default function GamesPage() {
         />
 
         <GameSection
+          id="in-development"
           eyebrow="In Development"
           title="Games we are currently building."
           description="Projects that are actively evolving and will receive more updates in the future."
@@ -112,6 +120,7 @@ export default function GamesPage() {
         />
 
         <GameSection
+          id="coming-soon"
           eyebrow="Coming Soon"
           title="Upcoming releases."
           description="Games that are preparing for their next major release."
@@ -119,17 +128,11 @@ export default function GamesPage() {
         />
 
         <GameSection
+          id="released-games"
           eyebrow="Released"
           title="Games you can already discover."
           description="Completed GameDan Team projects currently available to players."
           games={releasedGames}
-        />
-
-        <GameSection
-          eyebrow="Prototypes"
-          title="Experimental projects."
-          description="Early concepts and smaller experiments from GameDan Team."
-          games={prototypeGames}
         />
       </div>
     </main>
