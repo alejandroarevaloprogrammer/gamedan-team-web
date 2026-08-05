@@ -63,6 +63,7 @@ export const games: Game[] = [
     },
 
     distribution: {
+      internalPlayUrl: "/play/distance-of-love",
       itchUrl: "https://gamedanteam.itch.io/distance-of-love",
     },
 
