@@ -17,7 +17,11 @@ type PlayPageProps = {
 
 export function generateStaticParams() {
   return getAllGames()
-    .filter((game) => game.distribution.internalPlayUrl)
+    .filter(
+      (game) =>
+        game.distribution.internalPlayUrl &&
+        game.media.html5Entry,
+    )
     .map((game) => ({
       slug: game.slug,
     }));
@@ -29,7 +33,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const game = getGameBySlug(slug);
 
-  if (!game?.distribution.internalPlayUrl) {
+  if (
+    !game?.distribution.internalPlayUrl ||
+    !game.media.html5Entry
+  ) {
     return {
       title: `Game not found | ${brand.name}`,
     };
@@ -47,18 +54,14 @@ export default async function PlayPage({
   const { slug } = await params;
   const game = getGameBySlug(slug);
 
-  if (!game?.distribution.internalPlayUrl) {
+  if (
+    !game?.distribution.internalPlayUrl ||
+    !game.media.html5Entry
+  ) {
     notFound();
   }
 
-  const gameSource =
-    slug === "distance-of-love"
-      ? "/playable-games/distance-of-love/distanceoflove.html"
-      : null;
-
-  if (!gameSource) {
-    notFound();
-  }
+  const gameSource = game.media.html5Entry;
 
   return (
     <main className={styles.main}>
@@ -68,7 +71,11 @@ export default async function PlayPage({
       >
         <div>
           <p className="eyebrow">Play Online</p>
-          <h1 id="play-game-title">{game.title}</h1>
+
+          <h1 id="play-game-title">
+            {game.title}
+          </h1>
+
           <p>{game.shortDescription}</p>
         </div>
 

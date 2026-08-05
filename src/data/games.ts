@@ -52,6 +52,9 @@ export const games: Game[] = [
     media: {
       cover: "/games/distance-of-love/cover.png",
 
+    html5Entry:
+    "/playable-games/distance-of-love/distanceoflove.html",
+
       screenshots: [
         "/games/distance-of-love/screenshots/01.png",
         "/games/distance-of-love/screenshots/02.png",

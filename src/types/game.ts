@@ -35,6 +35,7 @@ export type GameMedia = {
   hero?: string;
   screenshots?: string[];
   trailer?: GameTrailer;
+  html5Entry?: string;
 };
 
 export type GameDistribution = {
