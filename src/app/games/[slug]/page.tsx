@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { GameTrailer } from "@/components/games/GameTrailer";
+import { GameSoundtrack } from "@/components/games/GameSoundtrack";
 import { GameGallery } from "@/components/games/GameGallery";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
@@ -266,6 +267,13 @@ export default async function GamePage({
         <GameTrailer
           gameTitle={game.title}
           trailer={trailer}
+        />
+      )}
+
+      {game.soundtrack && (
+        <GameSoundtrack
+          gameTitle={game.title}
+          soundtrack={game.soundtrack}
         />
       )}
 

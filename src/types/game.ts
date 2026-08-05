@@ -47,6 +47,14 @@ export type GameDistribution = {
   pressKitUrl?: string;
 };
 
+export type GameSoundtrack = {
+  title: string;
+  embedUrl: string;
+  height?: number;
+  externalUrl?: string;
+  externalLabel?: string;
+};
+
 export type Game = {
   id: string;
   slug: string;
@@ -65,5 +73,6 @@ export type Game = {
   media: GameMedia;
   distribution: GameDistribution;
 
+  soundtrack?: GameSoundtrack;
   releaseDate?: string;
 };

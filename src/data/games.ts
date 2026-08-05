@@ -70,6 +70,15 @@ export const games: Game[] = [
       itchUrl: "https://gamedanteam.itch.io/distance-of-love",
     },
 
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=1559153997/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl: "https://gamedanteam.bandcamp.com/",
+      externalLabel: "Bandcamp",
+    },
+
     releaseDate: "2021",
   },
 
@@ -147,5 +156,14 @@ export const games: Game[] = [
   },
 
   distribution: {},
+
+  soundtrack: {
+    title: "Development Playlist",
+    embedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1226684647&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    height: 450,
+    externalUrl: "https://soundcloud.com/gamedanteam",
+    externalLabel: "SoundCloud",
+  },
 }
 ];
