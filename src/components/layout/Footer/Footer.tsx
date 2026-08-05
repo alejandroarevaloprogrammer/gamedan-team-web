@@ -47,12 +47,12 @@ export function Footer() {
               Featured Game
             </Link>
 
-            <Link href="/games#released-games">
-              Released Games
-            </Link>
-
             <Link href="/games#in-development">
               Games in Development
+            </Link>
+
+            <Link href="/games#released-games">
+              Released Games
             </Link>
           </nav>
         </div>
