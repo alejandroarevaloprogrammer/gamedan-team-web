@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 
+import { PlayGamePlayer } from "./PlayGamePlayer";
+
 import styles from "./PlayGame.module.css";
 
 type PlayPageProps = {
@@ -77,36 +79,13 @@ export default async function PlayPage({
           >
             Game details
           </Link>
-
-          <a
-            href={gameSource}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.primaryAction}
-          >
-            Open fullscreen
-          </a>
         </div>
       </section>
 
-      <section
-        className={styles.playerSection}
-        aria-label={`${game.title} game player`}
-      >
-        <div className={styles.playerFrame}>
-          <iframe
-            src={gameSource}
-            title={`Play ${game.title}`}
-            className={styles.iframe}
-            allow="fullscreen; autoplay"
-            allowFullScreen
-          />
-        </div>
-
-        <p className={styles.notice}>
-          Click inside the game before using the keyboard.
-        </p>
-      </section>
+      <PlayGamePlayer
+        gameTitle={game.title}
+        gameSource={gameSource}
+      />
     </main>
   );
 }

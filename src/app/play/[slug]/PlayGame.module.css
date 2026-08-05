@@ -4,6 +4,10 @@
   padding: clamp(3.5rem, 7vw, 6rem) 0 var(--space-2xl);
 }
 
+/* ==========================================================
+   HEADER
+========================================================== */
+
 .header {
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
 
@@ -83,13 +87,70 @@
   box-shadow: var(--shadow-cyan);
 }
 
+.primaryAction:focus-visible,
+.secondaryAction:focus-visible,
+.fullscreenButton:focus-visible {
+  outline: 3px solid var(--color-cyan);
+  outline-offset: 4px;
+}
+
+/* ==========================================================
+   PLAYER
+========================================================== */
+
 .playerSection {
   display: grid;
   gap: 1rem;
 }
 
+.playerToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.notice {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+.fullscreenButton {
+  flex-shrink: 0;
+
+  min-height: 48px;
+  padding: 0.85rem 1.3rem;
+
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-pill);
+
+  background: var(--gradient-main);
+  color: var(--bg-main);
+
+  font-weight: 900;
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.fullscreenButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-pink);
+}
+
+.fullscreenContainer {
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+
+  background: #000;
+}
+
 .playerFrame {
   position: relative;
+
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -111,11 +172,33 @@
   background: #000;
 }
 
-.notice {
-  color: var(--text-soft);
-  font-size: 0.85rem;
-  text-align: center;
+/* ==========================================================
+   FULLSCREEN
+========================================================== */
+
+.fullscreenContainer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #000;
 }
+
+.fullscreenContainer:fullscreen .playerFrame {
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  aspect-ratio: 16 / 9;
+
+  box-shadow: none;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
 
 @media (max-width: 800px) {
   .header {
@@ -146,16 +229,27 @@
   .secondaryAction {
     width: 100%;
   }
+
+  .playerToolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fullscreenButton {
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .primaryAction,
-  .secondaryAction {
+  .secondaryAction,
+  .fullscreenButton {
     transition: none;
   }
 
   .primaryAction:hover,
-  .secondaryAction:hover {
+  .secondaryAction:hover,
+  .fullscreenButton:hover {
     transform: none;
   }
 }
