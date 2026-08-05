@@ -28,6 +28,15 @@ export const games: Game[] = [
       ],
     },
 
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1558097473&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl: "https://soundcloud.com/gamedanteam/sets/ona-bar-ost",
+      externalLabel: "SoundCloud",
+    },
+
     distribution: {},
   },
 
@@ -75,7 +84,7 @@ export const games: Game[] = [
       embedUrl:
         "https://bandcamp.com/EmbeddedPlayer/album=1559153997/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
       height: 120,
-      externalUrl: "https://gamedanteam.bandcamp.com/",
+      externalUrl: "https://gamedanteam.bandcamp.com/album/distance-of-love-ost",
       externalLabel: "Bandcamp",
     },
 
@@ -111,6 +120,15 @@ export const games: Game[] = [
         "/games/downriver-ride/screenshots/05.png",
         "/games/downriver-ride/screenshots/06.png",
       ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1445646940&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl: "https://soundcloud.com/gamedanteam/sets/downriver-ride-ost-wip",
+      externalLabel: "SoundCloud",
     },
 
     distribution: {},
@@ -162,7 +180,7 @@ export const games: Game[] = [
     embedUrl:
       "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1226684647&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     height: 450,
-    externalUrl: "https://soundcloud.com/gamedanteam",
+    externalUrl: "https://soundcloud.com/gamedanteam/sets/memory-hand-ost",
     externalLabel: "SoundCloud",
   },
 }
