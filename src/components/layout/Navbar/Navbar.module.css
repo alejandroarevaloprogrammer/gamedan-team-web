@@ -18,14 +18,12 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-
-  font-weight: 900;
+  justify-content: center;
 }
 
 .brandIcon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
 
   display: inline-flex;
   align-items: center;
@@ -45,9 +43,24 @@
   image-rendering: pixelated;
 }
 
-.brandName {
-  color: var(--text-main);
-  letter-spacing: -0.02em;
+.brandIcon,
+.brandIcon img {
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.brand:hover .brandIcon {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 0 28px rgba(255, 98, 187, 0.28),
+    0 0 40px rgba(179, 49, 241, 0.16);
+}
+
+.brand:hover .brandIcon img {
+  transform: scale(1.06);
 }
 
 .nav {

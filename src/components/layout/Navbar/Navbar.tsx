@@ -49,14 +49,10 @@ export function Navbar() {
           <Image
             src={brand.assets.icon}
             alt=""
-            width={34}
-            height={34}
+            width={40}
+            height={40}
             priority
           />
-        </span>
-
-        <span className={styles.brandName}>
-          {brand.name}
         </span>
       </Link>
 
