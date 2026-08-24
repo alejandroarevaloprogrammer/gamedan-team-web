@@ -268,13 +268,13 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
-  // PUNAL THE ADVENTURE
+  // NO HELP NO HOPE
   // ==========================================================
 
   {
-    id: "punal-the-adventure",
-    slug: "punal-the-adventure",
-    title: "Punal The Adventure",
+    id: "no-help-no-hope",
+    slug: "no-help-no-hope",
+    title: "No Help No Hope",
 
     featured: false,
 
@@ -284,44 +284,49 @@ export const games: Game[] = [
 
     genres: ["Visual Novel", "Anime"],
 
-    shortDescription: "Choose carefully who you trust.",
+    shortDescription:
+      "When there's no help and no hope, there's always a chance.",
 
     description:
-      "Punal is alone and searching for her family. Along the way, she will meet people who genuinely want to help her and others who may try to deceive her. Decide carefully who to trust, make the right choices and help Punal discover where her family is.",
+      "Lost in space, your ship is broken and you are getting sick. No one seems to be coming to your rescue, and finding someone willing to help may not be easy. Face the reality of your situation, find the strength to survive on your own and remember: when there's no help and no hope, there's always a chance.",
 
     media: {
-      cover: "/games/punal-the-adventure/cover.png",
+      cover: "/games/no-help-no-hope/cover.png",
 
       html5Entry:
-        "/playable-games/punal-the-adventure/punaltheadventure.html",
+        "/playable-games/no-help-no-hope/nohelpnohope.html",
 
       screenshots: [
-        "/games/punal-the-adventure/screenshots/01.png",
-        "/games/punal-the-adventure/screenshots/02.png",
-        "/games/punal-the-adventure/screenshots/03.png",
-        "/games/punal-the-adventure/screenshots/04.png",
-        "/games/punal-the-adventure/screenshots/05.png",
-        "/games/punal-the-adventure/screenshots/06.png",
+        "/games/no-help-no-hope/screenshots/01.png",
+        "/games/no-help-no-hope/screenshots/02.png",
+        "/games/no-help-no-hope/screenshots/03.png",
+        "/games/no-help-no-hope/screenshots/04.png",
+        "/games/no-help-no-hope/screenshots/05.png",
+        "/games/no-help-no-hope/screenshots/06.png",
       ],
     },
 
     distribution: {
-      internalPlayUrl: "/play/punal-the-adventure",
-      itchUrl: "https://gamedanteam.itch.io/punal-the-adventure",
+      internalPlayUrl: "/play/no-help-no-hope",
+      itchUrl: "https://gamedanteam.itch.io/no-help-no-hope",
     },
 
     soundtrack: {
       title: "Original Soundtrack",
       embedUrl:
-        "https://bandcamp.com/EmbeddedPlayer/album=3786004062/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+        "https://bandcamp.com/EmbeddedPlayer/album=3340736030/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
       height: 120,
       externalUrl:
-        "https://gamedanteam.bandcamp.com/album/punal-the-adventure-ost-2",
+        "https://gamedanteam.bandcamp.com/album/no-help-no-hope-ost",
       externalLabel: "Bandcamp",
     },
 
-    releaseDate: "2019",
+    releaseDate: "2020",
   },
+
+  // ==========================================================
+  // END NO HELP NO HOPE
+  // ==========================================================
 
   // ==========================================================
   // SEA FRIENDS FULL HD
@@ -441,6 +446,62 @@ export const games: Game[] = [
   // ==========================================================
   // END SEA FRIENDS
   // ==========================================================
+
+  // ==========================================================
+  // PUNAL THE ADVENTURE
+  // ==========================================================
+
+  {
+    id: "punal-the-adventure",
+    slug: "punal-the-adventure",
+    title: "Punal The Adventure",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Visual Novel", "Anime"],
+
+    shortDescription: "Choose carefully who you trust.",
+
+    description:
+      "Punal is alone and searching for her family. Along the way, she will meet people who genuinely want to help her and others who may try to deceive her. Decide carefully who to trust, make the right choices and help Punal discover where her family is.",
+
+    media: {
+      cover: "/games/punal-the-adventure/cover.png",
+
+      html5Entry:
+        "/playable-games/punal-the-adventure/punaltheadventure.html",
+
+      screenshots: [
+        "/games/punal-the-adventure/screenshots/01.png",
+        "/games/punal-the-adventure/screenshots/02.png",
+        "/games/punal-the-adventure/screenshots/03.png",
+        "/games/punal-the-adventure/screenshots/04.png",
+        "/games/punal-the-adventure/screenshots/05.png",
+        "/games/punal-the-adventure/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/punal-the-adventure",
+      itchUrl: "https://gamedanteam.itch.io/punal-the-adventure",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=3786004062/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/punal-the-adventure-ost-2",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2019",
+  },
 
   // ==========================================================
   // END PUNAL THE ADVENTURE
