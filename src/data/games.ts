@@ -324,6 +324,65 @@ export const games: Game[] = [
   },
 
   // ==========================================================
+  // SEA FRIENDS FULL HD
+  // ==========================================================
+
+  {
+    id: "sea-friends-full-hd",
+    slug: "sea-friends-full-hd",
+    title: "Sea Friends Full HD",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Visual Novel", "Anime"],
+
+    shortDescription: "Don't lose your sea friends.",
+
+    description:
+      "Mia has a very special friend: a cute little dolphin. But where has he gone? Follow Mia as she searches for her missing friend and hopes to be reunited with him. Along the way, discover a story about friendship and the importance of caring for the friends who are close to you.",
+
+    media: {
+      cover: "/games/sea-friends-full-hd/cover.png",
+
+      html5Entry:
+        "/playable-games/seafriends-full-hd/seafriendsfullhd.html",
+
+      screenshots: [
+        "/games/sea-friends-full-hd/screenshots/01.png",
+        "/games/sea-friends-full-hd/screenshots/02.png",
+        "/games/sea-friends-full-hd/screenshots/03.png",
+        "/games/sea-friends-full-hd/screenshots/04.png",
+        "/games/sea-friends-full-hd/screenshots/05.png",
+        "/games/sea-friends-full-hd/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/sea-friends-full-hd",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=2653201737/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/sea-friends-ost-2",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2020",
+  },
+
+  // ==========================================================
+  // END SEA FRIENDS FULL HD
+  // ==========================================================
+
+  // ==========================================================
   // SEA FRIENDS
   // ==========================================================
 
