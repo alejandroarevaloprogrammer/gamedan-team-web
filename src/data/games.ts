@@ -268,6 +268,66 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
+  // SUICIDE CLIFF
+  // ==========================================================
+
+  {
+    id: "suicide-cliff",
+    slug: "suicide-cliff",
+    title: "Suicide Cliff",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Visual Novel", "Anime"],
+
+    shortDescription: "Suicide is not the answer.",
+
+    description:
+      "At Suicide Cliff, you encounter a story shaped by pain, difficult choices and the reasons that can lead people to lose hope. As the story unfolds, reflect on what drives someone to such a breaking point and discover whether a different path forward is still possible.",
+
+    media: {
+      cover: "/games/suicide-cliff/cover.png",
+
+      html5Entry:
+        "/playable-games/suicide-cliff/suicidecliff.html",
+
+      screenshots: [
+        "/games/suicide-cliff/screenshots/01.png",
+        "/games/suicide-cliff/screenshots/02.png",
+        "/games/suicide-cliff/screenshots/03.png",
+        "/games/suicide-cliff/screenshots/04.png",
+        "/games/suicide-cliff/screenshots/05.png",
+        "/games/suicide-cliff/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/suicide-cliff",
+      itchUrl: "https://gamedanteam.itch.io/suicide-cliff",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=4111590002/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/suicide-cliff-ost",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2020",
+  },
+
+  // ==========================================================
+  // END SUICIDE CLIFF
+  // ==========================================================
+
+  // ==========================================================
   // NO HELP NO HOPE
   // ==========================================================
 
