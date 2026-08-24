@@ -159,7 +159,55 @@ export const games: Game[] = [
   // END DOWNRIVER RIDE
   // ==========================================================
 
-    // ==========================================================
+  // ==========================================================
+  // HACKER FRIEND
+  // ==========================================================
+
+  {
+    id: "hacker-friend",
+    slug: "hacker-friend",
+    title: "Hacker Friend",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["web"],
+
+    genres: ["Visual Novel", "Anime"],
+
+    shortDescription: "A close friend by your side.",
+
+    description:
+      "Your friend is missing, and it is up to you to find him. Use your hacker skills to follow the trail and overcome the challenges along the way. Your actions could help bring him back, but earning his trust again may prove to be just as important as finding him.",
+
+    media: {
+      cover: "/games/hacker-friend/cover.png",
+
+      screenshots: [
+        "/games/hacker-friend/screenshots/01.png",
+        "/games/hacker-friend/screenshots/02.png",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1421279374&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/hacker-friend-ost",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END HACKER FRIEND
+  // ==========================================================
+
+  // ==========================================================
   // DISTANCE OF LOVE
   // ==========================================================
 
