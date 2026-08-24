@@ -234,7 +234,7 @@ export const games: Game[] = [
 
     platforms: ["web"],
 
-    genres: ["Kinetic Novel", "Anime"],
+    genres: ["Visual Novel", "Anime"],
 
     shortDescription: "Live like a red crayon.",
 
@@ -273,10 +273,70 @@ export const games: Game[] = [
     },
 
     releaseDate: "2019",
-  }
+  },
 
   // ==========================================================
   // END AKACRAYON
+  // ==========================================================
+
+  // ==========================================================
+  // COVOX PARK
+  // ==========================================================
+
+  {
+    id: "covox-park",
+    slug: "covox-park",
+    title: "Covox Park",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Kinetic Novel", "Anime"],
+
+    shortDescription: "Love never ends.",
+
+    description:
+      "A pretty apple is crying, but what could be troubling her? Follow her journey alongside a friend who will stay by her side no matter what. As their adventure unfolds, discover whether friendship can grow into love and where their uncertain path will ultimately lead them.",
+
+    media: {
+      cover: "/games/covox-park/cover.png",
+
+      html5Entry:
+        "/playable-games/covox-park/covoxpark.html",
+
+      screenshots: [
+        "/games/covox-park/screenshots/01.png",
+        "/games/covox-park/screenshots/02.png",
+        "/games/covox-park/screenshots/03.png",
+        "/games/covox-park/screenshots/04.png",
+        "/games/covox-park/screenshots/05.png",
+        "/games/covox-park/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/covox-park",
+      itchUrl: "https://gamedanteam.itch.io/covox-park",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=3256840304/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/covox-park-ost-3",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2019",
+  }
+
+  // ==========================================================
+  // END COVOX PARK
   // ==========================================================
 
 ];
