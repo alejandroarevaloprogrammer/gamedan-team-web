@@ -266,6 +266,105 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
+  // BUNNY KICKER
+  // ==========================================================
+
+  {
+    id: "bunny-kicker",
+    slug: "bunny-kicker",
+    title: "Bunny Kicker",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Action"],
+
+    shortDescription: "Kick the bunnies and collect carrots.",
+
+    description:
+      "Kick bunnies, collect carrots and avoid spaceships and wolves in this retro action game. Stay focused as you take on the challenge and try to push your score higher with every run. How far can you go, and how high can you score?",
+
+    media: {
+      cover: "/games/bunny-kicker/cover.png",
+
+      screenshots: [
+        "/games/bunny-kicker/screenshots/01.png",
+        "/games/bunny-kicker/screenshots/02.png",
+        "/games/bunny-kicker/screenshots/03.png",
+        "/games/bunny-kicker/screenshots/04.png",
+        "/games/bunny-kicker/screenshots/05.png",
+        "/games/bunny-kicker/screenshots/06.png",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/756541950&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/bunny-kicker-ost-wip",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END BUNNY KICKER
+  // ==========================================================
+
+  // ==========================================================
+  // ECUS
+  // ==========================================================
+
+  {
+    id: "ecus",
+    slug: "ecus",
+    title: "Ecus",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Puzzle"],
+
+    shortDescription: "Destroy the blocks quickly to survive.",
+
+    description:
+      "Destroy blocks, trigger bombs and react quickly to stay alive in this fast-paced puzzle game. Aim for a higher score with every run as the challenge pushes your speed and decision-making. Keep playing, improve your skills and see how long you can survive.",
+
+    media: {
+      cover: "/games/ecus/cover.png",
+
+      screenshots: [
+        "/games/ecus/screenshots/01.gif",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1422857173&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/ecus-ost-wip",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END ECUS
+  // ==========================================================
+
+  // ==========================================================
   // HACKER FRIEND
   // ==========================================================
 
