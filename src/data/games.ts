@@ -160,6 +160,59 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
+  // FALLING PIRATES
+  // ==========================================================
+
+  {
+    id: "falling-pirates",
+    slug: "falling-pirates",
+    title: "Falling Pirates",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Arcade"],
+
+    shortDescription:
+      "Avoid cannonballs and defeat the invading pirates.",
+
+    description:
+      "Pirates are invading your island, and it is up to you to stop them. Dodge incoming cannonballs, defeat the attackers and make your way through a variety of challenging levels. When you are ready for more, take on Endless Mode and see how high you can push your score.",
+
+    media: {
+      cover: "/games/falling-pirates/cover.png",
+
+      screenshots: [
+        "/games/falling-pirates/screenshots/01.png",
+        "/games/falling-pirates/screenshots/02.png",
+        "/games/falling-pirates/screenshots/03.png",
+        "/games/falling-pirates/screenshots/04.png",
+        "/games/falling-pirates/screenshots/05.png",
+        "/games/falling-pirates/screenshots/06.png",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1558095664&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/falling-pirates-ost",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END FALLING PIRATES
+  // ==========================================================
+
+  // ==========================================================
   // HACKER FRIEND
   // ==========================================================
 
