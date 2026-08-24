@@ -1,6 +1,10 @@
 import type { Game } from "@/types/game";
 
 export const games: Game[] = [
+  // ==========================================================
+  // ONA BAR
+  // ==========================================================
+
   {
     id: "ona-bar",
     slug: "ona-bar",
@@ -40,6 +44,14 @@ export const games: Game[] = [
     distribution: {},
   },
 
+  // ==========================================================
+  // END ONA BAR
+  // ==========================================================
+
+  // ==========================================================
+  // DISTANCE OF LOVE
+  // ==========================================================
+
   {
     id: "distance-of-love",
     slug: "distance-of-love",
@@ -61,8 +73,8 @@ export const games: Game[] = [
     media: {
       cover: "/games/distance-of-love/cover.png",
 
-    html5Entry:
-    "/playable-games/distance-of-love/distanceoflove.html",
+      html5Entry:
+        "/playable-games/distance-of-love/distanceoflove.html",
 
       screenshots: [
         "/games/distance-of-love/screenshots/01.png",
@@ -84,12 +96,80 @@ export const games: Game[] = [
       embedUrl:
         "https://bandcamp.com/EmbeddedPlayer/album=1559153997/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
       height: 120,
-      externalUrl: "https://gamedanteam.bandcamp.com/album/distance-of-love-ost",
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/distance-of-love-ost",
       externalLabel: "Bandcamp",
     },
 
     releaseDate: "2021",
   },
+
+  // ==========================================================
+  // END DISTANCE OF LOVE
+  // ==========================================================
+
+    // ==========================================================
+  // MEMORY HAND
+  // ==========================================================
+
+  {
+    id: "memory-hand",
+    slug: "memory-hand",
+    title: "Memory Hand",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Memory"],
+
+    shortDescription:
+      "Test your memory with a retro rock-paper-scissors challenge.",
+
+    description:
+      "Test your memory across 30 levels of this retro-inspired challenge. Memorize the characters, sharpen your concentration and discover a new twist on the classic rock-paper-scissors game.",
+
+    media: {
+      cover: "/games/memory-hand/cover.png",
+
+      trailer: {
+        type: "youtube",
+        url: "https://www.youtube.com/watch?v=tusM0QiwaWw",
+        embedUrl:
+          "https://www.youtube-nocookie.com/embed/tusM0QiwaWw?rel=0",
+      },
+
+      screenshots: [
+        "/games/memory-hand/screenshots/01.png",
+        "/games/memory-hand/screenshots/02.png",
+        "/games/memory-hand/screenshots/03.png",
+        "/games/memory-hand/screenshots/04.png",
+        "/games/memory-hand/screenshots/05.png",
+        "/games/memory-hand/screenshots/06.png",
+      ],
+    },
+
+    distribution: {},
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1226684647&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl: "https://soundcloud.com/gamedanteam/sets/memory-hand-ost",
+      externalLabel: "SoundCloud",
+    },
+  },
+
+  // ==========================================================
+  // END MEMORY HAND
+  // ==========================================================
+
+  // ==========================================================
+  // DOWNRIVER RIDE
+  // ==========================================================
 
   {
     id: "downriver-ride",
@@ -127,61 +207,16 @@ export const games: Game[] = [
       embedUrl:
         "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1445646940&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
       height: 450,
-      externalUrl: "https://soundcloud.com/gamedanteam/sets/downriver-ride-ost-wip",
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/downriver-ride-ost-wip",
       externalLabel: "SoundCloud",
     },
 
     distribution: {},
-  },
+  }
 
-  {
-  id: "memory-hand",
-  slug: "memory-hand",
-  title: "Memory Hand",
+  // ==========================================================
+  // END DOWNRIVER RIDE
+  // ==========================================================
 
-  featured: false,
-
-  status: "in-development",
-
-  platforms: ["windows"],
-
-  genres: ["Retro", "Casual", "Memory"],
-
-  shortDescription:
-    "Test your memory with a retro rock-paper-scissors challenge.",
-
-  description:
-    "Test your memory across 30 levels of this retro-inspired challenge. Memorize the characters, sharpen your concentration and discover a new twist on the classic rock-paper-scissors game.",
-
-  media: {
-    cover: "/games/memory-hand/cover.png",
-
-    trailer: {
-      type: "youtube",
-      url: "https://www.youtube.com/watch?v=tusM0QiwaWw",
-      embedUrl:
-        "https://www.youtube-nocookie.com/embed/tusM0QiwaWw?rel=0",
-    },
-
-    screenshots: [
-      "/games/memory-hand/screenshots/01.png",
-      "/games/memory-hand/screenshots/02.png",
-      "/games/memory-hand/screenshots/03.png",
-      "/games/memory-hand/screenshots/04.png",
-      "/games/memory-hand/screenshots/05.png",
-      "/games/memory-hand/screenshots/06.png",
-    ],
-  },
-
-  distribution: {},
-
-  soundtrack: {
-    title: "Development Playlist",
-    embedUrl:
-      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1226684647&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
-    height: 450,
-    externalUrl: "https://soundcloud.com/gamedanteam/sets/memory-hand-ost",
-    externalLabel: "SoundCloud",
-  },
-}
 ];
