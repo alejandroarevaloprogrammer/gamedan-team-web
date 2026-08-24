@@ -122,7 +122,7 @@ export const games: Game[] = [
 
     platforms: ["windows"],
 
-    genres: ["Retro", "Casual", "Arcade"],
+    genres: ["Retro", "Casual", "Action"],
 
     shortDescription: "Ride the river, avoid dangers and collect coins.",
 
@@ -174,7 +174,7 @@ export const games: Game[] = [
 
     platforms: ["windows"],
 
-    genres: ["Retro", "Casual", "Arcade"],
+    genres: ["Retro", "Casual", "Action"],
 
     shortDescription:
       "Avoid cannonballs and defeat the invading pirates.",
@@ -210,6 +210,59 @@ export const games: Game[] = [
 
   // ==========================================================
   // END FALLING PIRATES
+  // ==========================================================
+
+  // ==========================================================
+  // KURO HOLE
+  // ==========================================================
+
+  {
+    id: "kuro-hole",
+    slug: "kuro-hole",
+    title: "Kuro Hole",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Action"],
+
+    shortDescription:
+      "Absorb the green balls and avoid the red ones.",
+
+    description:
+      "Move fast, clear challenging levels and aim for the highest score in this retro action game. Each level puts your speed and skill to the test as you progress. The game will not be easy, so be ready to push yourself to overcome every obstacle.",
+
+    media: {
+      cover: "/games/kuro-hole/cover.png",
+
+      screenshots: [
+        "/games/kuro-hole/screenshots/01.png",
+        "/games/kuro-hole/screenshots/02.png",
+        "/games/kuro-hole/screenshots/03.png",
+        "/games/kuro-hole/screenshots/04.png",
+        "/games/kuro-hole/screenshots/05.png",
+        "/games/kuro-hole/screenshots/06.png",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1457469835&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/kuro-hole-ost-wip",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END KURO HOLE
   // ==========================================================
 
   // ==========================================================
