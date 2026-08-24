@@ -268,6 +268,66 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
+  // PUNAL THE ADVENTURE
+  // ==========================================================
+
+  {
+    id: "punal-the-adventure",
+    slug: "punal-the-adventure",
+    title: "Punal The Adventure",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Visual Novel", "Anime"],
+
+    shortDescription: "Choose carefully who you trust.",
+
+    description:
+      "Punal is alone and searching for her family. Along the way, she will meet people who genuinely want to help her and others who may try to deceive her. Decide carefully who to trust, make the right choices and help Punal discover where her family is.",
+
+    media: {
+      cover: "/games/punal-the-adventure/cover.png",
+
+      html5Entry:
+        "/playable-games/punal-the-adventure/punaltheadventure.html",
+
+      screenshots: [
+        "/games/punal-the-adventure/screenshots/01.png",
+        "/games/punal-the-adventure/screenshots/02.png",
+        "/games/punal-the-adventure/screenshots/03.png",
+        "/games/punal-the-adventure/screenshots/04.png",
+        "/games/punal-the-adventure/screenshots/05.png",
+        "/games/punal-the-adventure/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/punal-the-adventure",
+      itchUrl: "https://gamedanteam.itch.io/punal-the-adventure",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=3786004062/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/punal-the-adventure-ost-2",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2019",
+  },
+
+  // ==========================================================
+  // END PUNAL THE ADVENTURE
+  // ==========================================================
+
+  // ==========================================================
   // AKACRAYON
   // ==========================================================
 
