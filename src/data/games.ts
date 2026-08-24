@@ -365,6 +365,53 @@ export const games: Game[] = [
   // ==========================================================
 
   // ==========================================================
+  // SLIME LABYRINTH
+  // ==========================================================
+
+  {
+    id: "slime-labyrinth",
+    slug: "slime-labyrinth",
+    title: "Slime Labyrinth",
+
+    featured: false,
+
+    status: "in-development",
+
+    platforms: ["windows"],
+
+    genres: ["Retro", "Casual", "Puzzle"],
+
+    shortDescription: "Escape from the labyrinths.",
+
+    description:
+      "Explore challenging labyrinths, collect the diamonds and open the door to the next level. Avoid enemies and traps as you search for the way out, and put your skills to the test across one hundred different levels.",
+
+    media: {
+      cover: "/games/slime-labyrinth/cover.png",
+
+      screenshots: [
+        "/games/slime-labyrinth/screenshots/01.png",
+      ],
+    },
+
+    soundtrack: {
+      title: "Development Playlist",
+      embedUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1554655435&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+      height: 450,
+      externalUrl:
+        "https://soundcloud.com/gamedanteam/sets/slime-labyrinth-ost-wip",
+      externalLabel: "SoundCloud",
+    },
+
+    distribution: {},
+  },
+
+  // ==========================================================
+  // END SLIME LABYRINTH
+  // ==========================================================
+
+  // ==========================================================
   // HACKER FRIEND
   // ==========================================================
 
