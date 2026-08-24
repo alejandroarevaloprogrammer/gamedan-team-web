@@ -17,7 +17,7 @@ export const games: Game[] = [
     shortDescription: "A special and dangerous place.",
 
     description:
-      "The place where everything begins. This cool bar will become a special place for you. Be ready to decide what to do, find your way and discover how your actions may help you find love.",
+      "The place where everything begins. Ona Bar will become a special place for you, where the choices you make can shape your path. Decide what to do, find your own way and discover how your actions may lead you to love.",
 
     media: {
       cover: "/games/ona-bar/cover.png",
@@ -56,7 +56,7 @@ export const games: Game[] = [
     shortDescription: "A big distance between two hearts.",
 
     description:
-      "They have a long-distance relationship, but is their love strong enough to last? She wants to be with him, although he seems to want to remain just friends. Finding love is possible—you only need to discover who is right for you.",
+      "A long-distance relationship puts two hearts to the test. She wants to be with him, while he seems determined to remain just friends. Follow their story as distance, feelings and uncertainty stand between them, and discover whether love can bring them closer together.",
 
     media: {
       cover: "/games/distance-of-love/cover.png",
@@ -104,10 +104,10 @@ export const games: Game[] = [
 
     genres: ["Retro", "Casual", "Arcade"],
 
-    shortDescription: "Avoid the dangers and collect coins.",
+    shortDescription: "Ride the river, avoid dangers and collect coins.",
 
     description:
-      "Play smart to survive and achieve the highest score. Collect coins and power-ups while avoiding the dangers along the river, and choose from nine available characters.",
+      "Ride down the river, collect coins and power-ups, and avoid the dangers that stand in your way. Survive for as long as you can, aim for the highest score and choose from nine different characters for your next run.",
 
     media: {
       cover: "/games/downriver-ride/cover.png",
@@ -151,7 +151,7 @@ export const games: Game[] = [
     "Test your memory with a retro rock-paper-scissors challenge.",
 
   description:
-    "Test your memory by clearing all 30 levels of this retro-inspired challenge. Memorize the characters, sharpen your concentration and discover a fun new twist on the classic rock-paper-scissors game.",
+    "Test your memory across 30 levels of this retro-inspired challenge. Memorize the characters, sharpen your concentration and discover a new twist on the classic rock-paper-scissors game.",
 
   media: {
     cover: "/games/memory-hand/cover.png",
