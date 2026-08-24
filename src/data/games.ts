@@ -48,66 +48,6 @@ export const games: Game[] = [
   // END ONA BAR
   // ==========================================================
 
-  // ==========================================================
-  // DISTANCE OF LOVE
-  // ==========================================================
-
-  {
-    id: "distance-of-love",
-    slug: "distance-of-love",
-    title: "Distance of Love",
-
-    featured: false,
-
-    status: "released",
-
-    platforms: ["web"],
-
-    genres: ["Kinetic Novel", "Anime"],
-
-    shortDescription: "A big distance between two hearts.",
-
-    description:
-      "A long-distance relationship puts two hearts to the test. She wants to be with him, while he seems determined to remain just friends. Follow their story as distance, feelings and uncertainty stand between them, and discover whether love can bring them closer together.",
-
-    media: {
-      cover: "/games/distance-of-love/cover.png",
-
-      html5Entry:
-        "/playable-games/distance-of-love/distanceoflove.html",
-
-      screenshots: [
-        "/games/distance-of-love/screenshots/01.png",
-        "/games/distance-of-love/screenshots/02.png",
-        "/games/distance-of-love/screenshots/03.png",
-        "/games/distance-of-love/screenshots/04.png",
-        "/games/distance-of-love/screenshots/05.png",
-        "/games/distance-of-love/screenshots/06.png",
-      ],
-    },
-
-    distribution: {
-      internalPlayUrl: "/play/distance-of-love",
-      itchUrl: "https://gamedanteam.itch.io/distance-of-love",
-    },
-
-    soundtrack: {
-      title: "Original Soundtrack",
-      embedUrl:
-        "https://bandcamp.com/EmbeddedPlayer/album=1559153997/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
-      height: 120,
-      externalUrl:
-        "https://gamedanteam.bandcamp.com/album/distance-of-love-ost",
-      externalLabel: "Bandcamp",
-    },
-
-    releaseDate: "2021",
-  },
-
-  // ==========================================================
-  // END DISTANCE OF LOVE
-  // ==========================================================
-
     // ==========================================================
   // MEMORY HAND
   // ==========================================================
@@ -213,10 +153,130 @@ export const games: Game[] = [
     },
 
     distribution: {},
-  }
+  },
 
   // ==========================================================
   // END DOWNRIVER RIDE
+  // ==========================================================
+
+    // ==========================================================
+  // DISTANCE OF LOVE
+  // ==========================================================
+
+  {
+    id: "distance-of-love",
+    slug: "distance-of-love",
+    title: "Distance of Love",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Kinetic Novel", "Anime"],
+
+    shortDescription: "A big distance between two hearts.",
+
+    description:
+      "A long-distance relationship puts two hearts to the test. She wants to be with him, while he seems determined to remain just friends. Follow their story as distance, feelings and uncertainty stand between them, and discover whether love can bring them closer together.",
+
+    media: {
+      cover: "/games/distance-of-love/cover.png",
+
+      html5Entry:
+        "/playable-games/distance-of-love/distanceoflove.html",
+
+      screenshots: [
+        "/games/distance-of-love/screenshots/01.png",
+        "/games/distance-of-love/screenshots/02.png",
+        "/games/distance-of-love/screenshots/03.png",
+        "/games/distance-of-love/screenshots/04.png",
+        "/games/distance-of-love/screenshots/05.png",
+        "/games/distance-of-love/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/distance-of-love",
+      itchUrl: "https://gamedanteam.itch.io/distance-of-love",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=1559153997/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/distance-of-love-ost",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2021",
+  },
+
+  // ==========================================================
+  // END DISTANCE OF LOVE
+  // ==========================================================
+
+  // ==========================================================
+  // AKACRAYON
+  // ==========================================================
+
+  {
+    id: "akacrayon",
+    slug: "akacrayon",
+    title: "Akacrayon",
+
+    featured: false,
+
+    status: "released",
+
+    platforms: ["web"],
+
+    genres: ["Kinetic Novel", "Anime"],
+
+    shortDescription: "Live like a red crayon.",
+
+    description:
+      "See life from the perspective of a red crayon as he shares his thoughts and his unusual way of looking at the world. Follow his reflections, discover a different approach to everyday life and perhaps find a new perspective of your own along the way.",
+
+    media: {
+      cover: "/games/akacrayon/cover.png",
+
+      html5Entry:
+        "/playable-games/akacrayon/akacrayon.html",
+
+      screenshots: [
+        "/games/akacrayon/screenshots/01.png",
+        "/games/akacrayon/screenshots/02.png",
+        "/games/akacrayon/screenshots/03.png",
+        "/games/akacrayon/screenshots/04.png",
+        "/games/akacrayon/screenshots/05.png",
+        "/games/akacrayon/screenshots/06.png",
+      ],
+    },
+
+    distribution: {
+      internalPlayUrl: "/play/akacrayon",
+      itchUrl: "https://gamedanteam.itch.io/akacrayon",
+    },
+
+    soundtrack: {
+      title: "Original Soundtrack",
+      embedUrl:
+        "https://bandcamp.com/EmbeddedPlayer/album=3574811137/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=true/",
+      height: 120,
+      externalUrl:
+        "https://gamedanteam.bandcamp.com/album/akacrayon-ost-2",
+      externalLabel: "Bandcamp",
+    },
+
+    releaseDate: "2019",
+  }
+
+  // ==========================================================
+  // END AKACRAYON
   // ==========================================================
 
 ];
