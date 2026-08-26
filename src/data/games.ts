@@ -933,7 +933,7 @@ export const games: Game[] = [
     },
 
     releaseDate: "2019",
-  }
+  },
 
   // ==========================================================
   // END COVOX PARK
