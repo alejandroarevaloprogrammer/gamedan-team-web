@@ -227,7 +227,6 @@ export function GameGallery({
                   selectedIndex + 1
                 } of ${screenshots.length}`}
                 fill
-                priority
                 unoptimized={screenshots[
                   selectedIndex
                 ]
