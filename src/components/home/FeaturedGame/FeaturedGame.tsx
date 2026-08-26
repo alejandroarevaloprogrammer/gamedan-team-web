@@ -30,6 +30,7 @@ export function FeaturedGame() {
             src={featuredGame.media.cover}
             alt={`${featuredGame.title} cover art`}
             fill
+            priority
             sizes="(max-width: 900px) 100vw, 60vw"
             className={styles.cover}
           />
