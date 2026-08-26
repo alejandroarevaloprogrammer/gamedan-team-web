@@ -62,11 +62,11 @@ export function ContactForm() {
     setStatus("submitting");
 
     /*
-     * Envío provisional.
-     *
-     * Más adelante sustituiremos este bloque por una petición
-     * al endpoint PHP alojado en GoDaddy.
-     */
+    * Temporary form submission.
+    *
+    * This block will later be replaced with a request
+    * to the PHP endpoint hosted on GoDaddy.
+    */
     window.setTimeout(() => {
       setStatus("success");
       setSubject("");
