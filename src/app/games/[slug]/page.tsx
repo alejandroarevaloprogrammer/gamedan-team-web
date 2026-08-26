@@ -24,7 +24,6 @@ type GamePageProps = {
 const statusLabels: Record<GameStatus, string> = {
   released: "Released",
   "in-development": "In Development",
-  prototype: "Prototype",
   "coming-soon": "Coming Soon",
 };
 
@@ -263,7 +262,7 @@ export default async function GamePage({
         </div>
       </section>
 
-            {trailer && (
+      {trailer && (
         <GameTrailer
           gameTitle={game.title}
           trailer={trailer}
