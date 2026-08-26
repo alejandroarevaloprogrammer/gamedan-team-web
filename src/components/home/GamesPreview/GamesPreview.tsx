@@ -4,7 +4,7 @@ import { getNonFeaturedGames } from "@/lib/games";
 import styles from "./GamesPreview.module.css";
 
 export function GamesPreview() {
-  const games = getNonFeaturedGames();
+  const games = getNonFeaturedGames().slice(0, 6);
 
   if (games.length === 0) {
     return null;
