@@ -20,11 +20,11 @@ export function GameSoundtrack({
         <p className="eyebrow">Soundtrack</p>
 
         <h2 id="game-soundtrack-title">
-            {soundtrack.title}
+          {soundtrack.title}
         </h2>
 
         <p>
-            Original music created for <strong>{gameTitle}</strong>.
+          Original music created for <strong>{gameTitle}</strong>.
         </p>
       </div>
 
