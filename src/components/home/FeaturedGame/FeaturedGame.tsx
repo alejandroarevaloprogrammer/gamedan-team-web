@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedGame } from "@/lib/games";
+import type { Game } from "@/types/game";
 import styles from "./FeaturedGame.module.css";
 
-function formatStatus(status: string): string {
+function formatStatus(status: Game["status"]): string {
   return status
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -21,7 +22,9 @@ export function FeaturedGame() {
     >
       <div className={styles.heading}>
         <p className="eyebrow">Featured Game</p>
-        <h2 id="featured-game-title">Discover our current highlight.</h2>
+        <h2 id="featured-game-title">
+          Discover our current highlight.
+        </h2>
       </div>
 
       <article className={styles.showcase}>
