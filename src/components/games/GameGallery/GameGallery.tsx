@@ -157,6 +157,9 @@ export function GameGallery({
                       index + 1
                     }`}
                     fill
+                    unoptimized={screenshot
+                      .toLowerCase()
+                      .endsWith(".gif")}
                     sizes="(max-width: 700px) 100vw, 50vw"
                     className={
                       styles.thumbnailImage
@@ -225,6 +228,11 @@ export function GameGallery({
                 } of ${screenshots.length}`}
                 fill
                 priority
+                unoptimized={screenshots[
+                  selectedIndex
+                ]
+                  .toLowerCase()
+                  .endsWith(".gif")}
                 sizes="100vw"
                 className={styles.lightboxImage}
               />

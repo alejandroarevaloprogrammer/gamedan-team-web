@@ -102,7 +102,7 @@ export default async function GamePage({
                 src={game.media.cover}
                 alt={`${game.title} cover art`}
                 fill
-                priority
+                loading="eager"
                 sizes="(max-width: 900px) 100vw, 54vw"
                 className={styles.coverImage}
               />
