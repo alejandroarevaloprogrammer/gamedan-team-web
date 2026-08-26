@@ -512,7 +512,7 @@ export const games: Game[] = [
       externalLabel: "Bandcamp",
     },
 
-    releaseDate: "2021",
+    releaseDate: "2020",
   },
 
   // ==========================================================
