@@ -108,8 +108,7 @@ export default function AboutPage() {
             <span>Visual Novels</span>
             <span>Retro Games</span>
             <span>Casual Games</span>
-            <span>Action</span>
-            <span>Platformers</span>
+            <span>Action Games</span>
             <span>Puzzle Games</span>
             <span>Story-driven Experiences</span>
           </div>
@@ -188,7 +187,7 @@ export default function AboutPage() {
 
             <p>We don't copy other studios.</p>
 
-            <p>We don't want to release unfinished games.</p>
+            <p>We don't release unfinished games.</p>
 
             <p className={styles.highlightStatement}>
               We create games with personality and purpose.
