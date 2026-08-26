@@ -65,15 +65,31 @@ export function GameGallery({
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        closeLightbox();
+        setSelectedIndex(null);
       }
 
       if (event.key === "ArrowLeft") {
-        showPrevious();
+        setSelectedIndex((currentIndex) => {
+          if (currentIndex === null) {
+            return null;
+          }
+
+          return (
+            currentIndex - 1 + screenshots.length
+          ) % screenshots.length;
+        });
       }
 
       if (event.key === "ArrowRight") {
-        showNext();
+        setSelectedIndex((currentIndex) => {
+          if (currentIndex === null) {
+            return null;
+          }
+
+          return (
+            currentIndex + 1
+          ) % screenshots.length;
+        });
       }
     }
 

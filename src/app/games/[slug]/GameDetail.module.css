@@ -233,11 +233,6 @@
   border-color: rgba(251, 245, 167, 0.34);
 }
 
-.statusBadge[data-status="prototype"] {
-  color: var(--color-soft);
-  border-color: rgba(255, 151, 208, 0.34);
-}
-
 .statusBadge[data-status="coming-soon"] {
   color: var(--color-orange);
   border-color: rgba(255, 176, 98, 0.34);

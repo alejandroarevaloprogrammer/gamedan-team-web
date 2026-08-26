@@ -181,13 +181,13 @@ export default function AboutPage() {
           </h2>
 
           <div className={styles.statements}>
-            <p>We don't chase trends.</p>
+            <p>We don&apos;t chase trends.</p>
 
-            <p>We don't build pay-to-win experiences.</p>
+            <p>We don&apos;t build pay-to-win experiences.</p>
 
-            <p>We don't copy other studios.</p>
+            <p>We don&apos;t copy other studios.</p>
 
-            <p>We don't release unfinished games.</p>
+            <p>We don&apos;t release unfinished games.</p>
 
             <p className={styles.highlightStatement}>
               We create games with personality and purpose.
