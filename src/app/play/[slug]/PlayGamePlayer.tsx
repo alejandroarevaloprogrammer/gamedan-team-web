@@ -44,7 +44,6 @@ export function PlayGamePlayer({
       aria-label={`${gameTitle} game player`}
     >
       <div className={styles.playerToolbar}>
-        
         <button
           type="button"
           className={styles.fullscreenButton}
