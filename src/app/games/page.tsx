@@ -92,7 +92,7 @@ export default function GamesPage() {
 
         <p className={styles.intro}>
           Explore the retro and anime-inspired games created by
-          GameDan Team, from visual novels to casual arcade
+          GameDan Team, from visual novels to casual and action
           experiences.
         </p>
 
