@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { brand } from "@/config/brand";
-import { getFeaturedGame } from "@/lib/games";
 
 import styles from "./Footer.module.css";
 
@@ -10,8 +9,6 @@ const startingYear = 2019;
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
-  const featuredGame = getFeaturedGame();
-
   return (
     <footer className={styles.footer}>
       <div className={styles.grid}>
