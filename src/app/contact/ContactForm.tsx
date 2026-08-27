@@ -43,7 +43,7 @@ export function ContactForm() {
   const [subject, setSubject] =
     useState("");
 
-  function handleSubmit(
+  async function handleSubmit(
     event: FormEvent<HTMLFormElement>,
   ) {
     event.preventDefault();
@@ -61,17 +61,38 @@ export function ContactForm() {
 
     setStatus("submitting");
 
-    /*
-    * Temporary form submission.
-    *
-    * This block will later be replaced with a request
-    * to the PHP endpoint hosted on GoDaddy.
-    */
-    window.setTimeout(() => {
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(
+        "/contact-api",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "The message could not be sent.",
+        );
+      }
+
+      const data = await response.json();
+
+      if (!data.success) {
+        throw new Error(
+          data.message ||
+            "The message could not be sent.",
+        );
+      }
+
       setStatus("success");
       setSubject("");
       form.reset();
-    }, 700);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -200,8 +221,7 @@ export function ContactForm() {
       >
         {status === "success" && (
           <p className={styles.successMessage}>
-            The form is working correctly. Email delivery will
-            be connected during the production setup.
+            Your message has been sent successfully.
           </p>
         )}
 
