@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { GameTrailer } from "@/components/games/GameTrailer";
 import { GameSoundtrack } from "@/components/games/GameSoundtrack";
 import { GameGallery } from "@/components/games/GameGallery";
+import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 import type {
   GamePlatform,
@@ -100,8 +101,36 @@ export default async function GamePage({
 
   const trailer = game.media.trailer;
 
+  const videoGameJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: game.title,
+    description: game.description,
+    url: `${brand.website}/games/${game.slug}`,
+    image: `${brand.website}${game.media.cover}`,
+    genre: game.genres,
+    gamePlatform: game.platforms.map(
+      (platform) => platformLabels[platform],
+    ),
+    publisher: {
+      "@type": "Organization",
+      name: brand.name,
+      url: brand.website,
+    },
+    ...(game.releaseDate && {
+      datePublished: game.releaseDate,
+    }),
+  };
+
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoGameJsonLd),
+        }}
+      />
+
       <section
         className={styles.hero}
         aria-labelledby="game-detail-title"

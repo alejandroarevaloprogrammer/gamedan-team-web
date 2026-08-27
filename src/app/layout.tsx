@@ -102,12 +102,38 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: brand.name,
+  url: brand.website,
+  logo: `${brand.website}${brand.assets.logo}`,
+  description: brand.description,
+  email: brand.email,
+  sameAs: [
+    brand.social.youtube,
+    brand.social.instagram,
+    brand.social.x,
+    brand.social.steam,
+    brand.social.itch,
+    brand.social.bandcamp,
+    brand.social.soundcloud,
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+
         <div className="site-shell">
           <BackgroundFX />
           <Navbar />
