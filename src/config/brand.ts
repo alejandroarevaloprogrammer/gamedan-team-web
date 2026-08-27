@@ -7,7 +7,7 @@ export const brand = {
   mission: "We create games we would love to play ourselves.",
   website: "https://gamedanteam.com",
   repository: "gamedan-team-web",
-  email: "gamedanteam@gmail.com",
+  email: "contact@gamedanteam.com",
   social: {
     youtube: "https://www.youtube.com/@gamedanteam",
     instagram: "https://www.instagram.com/gamedanteam/",
