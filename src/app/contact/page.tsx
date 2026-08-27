@@ -6,9 +6,18 @@ import { ContactForm } from "./ContactForm";
 import styles from "./ContactPage.module.css";
 
 export const metadata: Metadata = {
-  title: `Contact | ${brand.name}`,
+  title: "Contact",
   description:
     "Contact GameDan Team for general questions, collaborations, press enquiries and information about our games.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact",
+    description:
+      "Contact GameDan Team for general questions, collaborations, press enquiries and information about our games.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {

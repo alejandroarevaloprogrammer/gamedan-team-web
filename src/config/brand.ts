@@ -5,7 +5,7 @@ export const brand = {
   description:
     "An independent game development studio creating memorable retro and anime-inspired games.",
   mission: "We create games we would love to play ourselves.",
-  website: "https://www.gamedanteam.com",
+  website: "https://gamedanteam.com",
   repository: "gamedan-team-web",
   email: "gamedanteam@gmail.com",
   social: {

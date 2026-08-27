@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import { GameTrailer } from "@/components/games/GameTrailer";
 import { GameSoundtrack } from "@/components/games/GameSoundtrack";
 import { GameGallery } from "@/components/games/GameGallery";
-import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 import type {
   GamePlatform,
@@ -53,13 +52,39 @@ export async function generateMetadata({
 
   if (!game) {
     return {
-      title: `Game not found | ${brand.name}`,
+      title: "Game not found",
     };
   }
 
+  const gameUrl = `/games/${game.slug}`;
+
   return {
-    title: `${game.title} | ${brand.name}`,
+    title: game.title,
     description: game.shortDescription,
+
+    alternates: {
+      canonical: gameUrl,
+    },
+
+    openGraph: {
+      type: "website",
+      title: game.title,
+      description: game.shortDescription,
+      url: gameUrl,
+      images: [
+        {
+          url: game.media.cover,
+          alt: `${game.title} cover art`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: game.title,
+      description: game.shortDescription,
+      images: [game.media.cover],
+    },
   };
 }
 

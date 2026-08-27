@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 
 import { PlayGamePlayer } from "./PlayGamePlayer";
@@ -38,13 +37,41 @@ export async function generateMetadata({
     !game.media.html5Entry
   ) {
     return {
-      title: `Game not found | ${brand.name}`,
+      title: "Game not found",
     };
   }
 
+  const playUrl = `/play/${game.slug}`;
+  const description =
+    `Play ${game.title} directly on the official GameDan Team website.`;
+
   return {
-    title: `Play ${game.title} | ${brand.name}`,
-    description: `Play ${game.title} directly on the official GameDan Team website.`,
+    title: `Play ${game.title} Online`,
+    description,
+
+    alternates: {
+      canonical: playUrl,
+    },
+
+    openGraph: {
+      type: "website",
+      title: `Play ${game.title} Online`,
+      description,
+      url: playUrl,
+      images: [
+        {
+          url: game.media.cover,
+          alt: `${game.title} cover art`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `Play ${game.title} Online`,
+      description,
+      images: [game.media.cover],
+    },
   };
 }
 

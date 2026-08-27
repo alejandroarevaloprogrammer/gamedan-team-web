@@ -7,9 +7,18 @@ import { brand } from "@/config/brand";
 import styles from "./AboutPage.module.css";
 
 export const metadata: Metadata = {
-  title: `About | ${brand.name}`,
+  title: "About",
   description:
     "Learn about GameDan Team, an independent game development studio creating retro and anime-inspired experiences.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About",
+    description:
+      "Learn about GameDan Team, an independent game development studio creating retro and anime-inspired experiences.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -108,7 +117,8 @@ export default function AboutPage() {
             <span>Visual Novels</span>
             <span>Retro Games</span>
             <span>Casual Games</span>
-            <span>Action Games</span>
+            <span>Action</span>
+            <span>Platformers</span>
             <span>Puzzle Games</span>
             <span>Story-driven Experiences</span>
           </div>
@@ -187,7 +197,7 @@ export default function AboutPage() {
 
             <p>We don&apos;t copy other studios.</p>
 
-            <p>We don&apos;t release unfinished games.</p>
+            <p>We don&apos;t want to release unfinished games.</p>
 
             <p className={styles.highlightStatement}>
               We create games with personality and purpose.
