@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
+
 import { GameCard } from "@/components/games/GameCard";
 import { getAllGames } from "@/lib/games";
 import type { Game } from "@/types/game";
 
 import styles from "./GamesPage.module.css";
+
+export const metadata: Metadata = {
+  title: "Games",
+  description:
+    "Explore GameDan Team games, from retro and anime-inspired visual novels to casual, action, platform and puzzle experiences.",
+  alternates: {
+    canonical: "/games",
+  },
+  openGraph: {
+    title: "Games",
+    description:
+      "Explore GameDan Team games, from retro and anime-inspired visual novels to casual, action, platform and puzzle experiences.",
+    url: "/games",
+  },
+};
 
 type GameSectionProps = {
   id: string;
