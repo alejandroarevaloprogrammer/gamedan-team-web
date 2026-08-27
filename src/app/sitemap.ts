@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next";
 import { brand } from "@/config/brand";
 import { getAllGames } from "@/lib/games";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const games = getAllGames();
 
