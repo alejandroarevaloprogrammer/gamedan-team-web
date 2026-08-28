@@ -101,6 +101,31 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       noValidate
     >
+      {/* Honeypot field for automated spam bots */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: "-10000px",
+          top: "auto",
+          width: "1px",
+          height: "1px",
+          overflow: "hidden",
+        }}
+      >
+        <label htmlFor="website">
+          Website
+        </label>
+
+        <input
+          id="website"
+          name="website"
+          type="text"
+          autoComplete="off"
+          tabIndex={-1}
+        />
+      </div>
+
       <div className={styles.fieldGrid}>
         <div className={styles.field}>
           <label htmlFor="name">
