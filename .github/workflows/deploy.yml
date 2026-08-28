@@ -25,23 +25,15 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Install lftp
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-
       - name: Deploy to GoDaddy
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "ftp://$FTP_SERVER:21" <<EOF
-          set ftp:ssl-allow false
-          set ftp:passive-mode true
-          set net:max-retries 3
-          set net:timeout 30
-          set mirror:parallel-transfer-count 4
-          mirror --reverse --delete --only-newer --parallel=4 ./out/ ./
-          bye
-          EOF
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./out/
+          server-dir: ./
+          state-name: .ftp-deploy-sync-state.json
+          log-level: standard
