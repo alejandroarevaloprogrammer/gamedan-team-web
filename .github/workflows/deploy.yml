@@ -36,7 +36,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
 
-          rsync -azcn \
+          rsync -azcni \
             --delete \
             --exclude='.ftp-deploy-sync-state.json' \
             ./out/ \
