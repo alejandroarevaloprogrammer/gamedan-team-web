@@ -25,7 +25,7 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Test SSH rsync dry run
+      - name: Deploy to GoDaddy via rsync
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
@@ -42,16 +42,3 @@ jobs:
             --exclude='.ftpquota' \
             ./out/ \
             "$SSH_USER@$SSH_HOST:/home/w0zo7nqf5w0i/public_html/gdt/"
-
-      - name: Deploy to GoDaddy
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          local-dir: ./out/
-          server-dir: ./
-          state-name: .ftp-deploy-sync-state.json
-          log-level: standard
