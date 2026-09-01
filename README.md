@@ -462,7 +462,7 @@ Front-End Developer
 
 GitHub: https://github.com/alejandroarevaloprogrammer
 
-Portfolio: https://www.alejandroarevalorojas.com
+Portfolio: https://alejandroarevalorojas.com
 
 ------------------------------------------------------------------------
 
