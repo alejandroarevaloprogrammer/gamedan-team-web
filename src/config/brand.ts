@@ -1,6 +1,6 @@
 export const brand = {
   name: "GameDan Team",
-  shortName: "GameDan",
+  shortName: "GDT",
   tagline: "Enjoy your gaming lifestyle.",
   description:
     "An independent game development studio creating memorable retro and anime-inspired games.",
