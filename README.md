@@ -266,7 +266,6 @@ src/
 
 public/
 ├── games/
-├── icons/
 └── ...
 ```
 
