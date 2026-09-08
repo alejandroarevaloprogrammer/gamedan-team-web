@@ -1,4 +1,7 @@
 import type { GameTrailer as GameTrailerData } from "@/types/game";
+
+import { ExternalMedia } from "@/components/cookies/ExternalMedia/ExternalMedia";
+
 import styles from "./GameTrailer.module.css";
 
 type GameTrailerProps = {
@@ -30,15 +33,17 @@ export function GameTrailer({
 
       <div className={styles.player}>
         {trailer.type === "youtube" ? (
-          <iframe
-            src={trailer.embedUrl}
-            title={`${gameTitle} official trailer`}
-            className={styles.iframe}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
+          <ExternalMedia provider="YouTube">
+            <iframe
+              src={trailer.embedUrl}
+              title={`${gameTitle} official trailer`}
+              className={styles.iframe}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </ExternalMedia>
         ) : (
           <video
             className={styles.video}

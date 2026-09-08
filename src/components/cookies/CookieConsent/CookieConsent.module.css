@@ -1,0 +1,153 @@
+.banner {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  left: var(--space-md);
+  z-index: 1000;
+
+  max-width: 760px;
+  margin-inline: auto;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(179, 49, 241, 0.12),
+      rgba(255, 98, 187, 0.08)
+    ),
+    var(--bg-surface);
+
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    var(--shadow-pink),
+    0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.content {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: var(--space-md);
+}
+
+.text {
+  max-width: 520px;
+}
+
+.text h2 {
+  margin: 0 0 var(--space-xs);
+
+  color: var(--text-main);
+  font-size: 1.15rem;
+}
+
+.text p {
+  margin: 0;
+
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.text p + p {
+  margin-top: var(--space-xs);
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--space-xs);
+}
+
+.button {
+  min-width: 100px;
+  padding: 0.75rem 1.1rem;
+
+  color: var(--text-main);
+  font: inherit;
+  font-weight: 700;
+
+  background: var(--bg-surface-2);
+
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.button:hover {
+  background: rgba(255, 98, 187, 0.16);
+  border-color: var(--color-soft);
+  box-shadow: var(--shadow-pink);
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .banner {
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+    left: var(--space-sm);
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .banner {
+    right: var(--space-xs);
+    bottom: var(--space-xs);
+    left: var(--space-xs);
+  }
+
+  .content {
+    padding: var(--space-sm);
+  }
+}
+
+.settingsButton {
+  padding: 0;
+
+  color: var(--text-muted);
+  font: inherit;
+
+  background: none;
+  border: 0;
+
+  cursor: pointer;
+
+  transition: color var(--transition-fast);
+}
+
+.settingsButton:hover {
+  color: var(--color-primary);
+}
+
+.settingsButton:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 3px;
+}

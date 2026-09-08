@@ -1,5 +1,7 @@
 import type { GameSoundtrack as GameSoundtrackData } from "@/types/game";
 
+import { ExternalMedia } from "@/components/cookies/ExternalMedia/ExternalMedia";
+
 import styles from "./GameSoundtrack.module.css";
 
 type GameSoundtrackProps = {
@@ -11,6 +13,10 @@ export function GameSoundtrack({
   gameTitle,
   soundtrack,
 }: GameSoundtrackProps) {
+  const provider = soundtrack.embedUrl.includes("soundcloud.com")
+    ? "SoundCloud"
+    : "Bandcamp";
+
   return (
     <section
       className={styles.section}
@@ -29,15 +35,17 @@ export function GameSoundtrack({
       </div>
 
       <div className={styles.player}>
-        <iframe
-          src={soundtrack.embedUrl}
-          title={`${gameTitle} ${soundtrack.title}`}
-          width="100%"
-          height={soundtrack.height ?? 180}
-          loading="lazy"
-          allow="autoplay"
-          className={styles.iframe}
-        />
+        <ExternalMedia provider={provider}>
+          <iframe
+            src={soundtrack.embedUrl}
+            title={`${gameTitle} ${soundtrack.title}`}
+            width="100%"
+            height={soundtrack.height ?? 180}
+            loading="lazy"
+            allow="autoplay"
+            className={styles.iframe}
+          />
+        </ExternalMedia>
       </div>
 
       {soundtrack.externalUrl && (

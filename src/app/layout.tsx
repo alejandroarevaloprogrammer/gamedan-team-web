@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { CookieConsent } from "@/components/cookies/CookieConsent/CookieConsent";
 import { Footer } from "@/components/layout/Footer/Footer";
 import { Navbar } from "@/components/layout/Navbar/Navbar";
 import { BackgroundFX } from "@/components/ui/BackgroundFX/BackgroundFX";
@@ -135,6 +136,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+
+        <CookieConsent />
       </body>
     </html>
   );

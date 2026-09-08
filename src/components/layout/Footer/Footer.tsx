@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { CookieSettingsButton } from "@/components/cookies/CookieConsent/CookieSettingsButton";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { brand } from "@/config/brand";
 
@@ -102,6 +103,8 @@ export function Footer() {
           © {startingYear}–{currentYear} {brand.name}. All rights
           reserved.
         </p>
+
+        <CookieSettingsButton />
 
         <p className={styles.tagline}>{brand.tagline}</p>
       </div>
