@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import styles from "./CookieConsent.module.css";
@@ -81,7 +82,9 @@ export function CookieConsent() {
 
           <p>
             You can accept or reject external media. You can change
-            your choice later from Cookie settings.
+            your choice later from Cookie settings. See our{" "}
+            <Link href="/cookies">Cookie Policy</Link> for more
+            information.
           </p>
         </div>
 
