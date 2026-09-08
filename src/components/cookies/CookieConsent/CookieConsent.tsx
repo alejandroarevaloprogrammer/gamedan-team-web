@@ -8,40 +8,39 @@ import styles from "./CookieConsent.module.css";
 type ConsentStatus = "pending" | "accepted" | "rejected";
 
 const STORAGE_KEY = "gamedan-cookie-consent";
-
-function getInitialConsent(): ConsentStatus {
-  if (typeof window === "undefined") {
-    return "pending";
-  }
-
-  const storedConsent = localStorage.getItem(STORAGE_KEY);
-
-  if (storedConsent === "accepted" || storedConsent === "rejected") {
-    return storedConsent;
-  }
-
-  return "pending";
-}
+const CONSENT_EVENT = "gamedan-consent-change";
 
 export function CookieConsent() {
   const [consent, setConsent] =
-    useState<ConsentStatus>(getInitialConsent);
+    useState<ConsentStatus | null>(null);
 
   useEffect(() => {
     function handleConsentChange(event: Event) {
       const customEvent = event as CustomEvent<ConsentStatus>;
-
       setConsent(customEvent.detail);
     }
 
     window.addEventListener(
-      "gamedan-consent-change",
+      CONSENT_EVENT,
       handleConsentChange,
     );
 
+    const storedConsent = localStorage.getItem(STORAGE_KEY);
+
+    const initialConsent: ConsentStatus =
+      storedConsent === "accepted" || storedConsent === "rejected"
+        ? storedConsent
+        : "pending";
+
+    const timeoutId = window.setTimeout(() => {
+      setConsent(initialConsent);
+    }, 0);
+
     return () => {
+      window.clearTimeout(timeoutId);
+
       window.removeEventListener(
-        "gamedan-consent-change",
+        CONSENT_EVENT,
         handleConsentChange,
       );
     };
@@ -54,7 +53,7 @@ export function CookieConsent() {
     setConsent(value);
 
     window.dispatchEvent(
-      new CustomEvent("gamedan-consent-change", {
+      new CustomEvent(CONSENT_EVENT, {
         detail: value,
       }),
     );

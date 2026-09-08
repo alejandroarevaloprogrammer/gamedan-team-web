@@ -77,8 +77,51 @@ export default function PrivacyPage() {
           </p>
 
           <p>
+            Providing this information is voluntary. However, if you
+            do not provide the information necessary to understand
+            and respond to your enquiry, we may be unable to reply.
+          </p>
+
+          <p>
             Please do not include unnecessary sensitive personal
             information in your message.
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionLabel}>
+          <p className="eyebrow">Legal Basis</p>
+        </div>
+
+        <div className={styles.sectionContent}>
+          <h2>Why we process contact information</h2>
+
+          <p>
+            The legal basis for processing information submitted
+            through the contact form depends on the nature of your
+            enquiry.
+          </p>
+
+          <p>
+            Where your enquiry concerns a potential service,
+            collaboration or other arrangement and you ask us to take
+            steps before entering into an agreement, processing may be
+            necessary in order to take those steps at your request.
+          </p>
+
+          <p>
+            For other legitimate enquiries, processing may be based on
+            our legitimate interest in receiving, managing and
+            responding to communications addressed to us, provided
+            that this interest is not overridden by your rights and
+            freedoms.
+          </p>
+
+          <p>
+            Technical information used for spam and abuse prevention
+            is processed for our legitimate interest in protecting the
+            website, contact form and communications from misuse.
           </p>
         </div>
       </section>
@@ -138,6 +181,28 @@ export default function PrivacyPage() {
 
       <section className={styles.section}>
         <div className={styles.sectionLabel}>
+          <p className="eyebrow">Recipients</p>
+        </div>
+
+        <div className={styles.sectionContent}>
+          <h2>Who may process your information</h2>
+
+          <p>
+            Personal information submitted through the contact form
+            may be processed through the technical and email services
+            used to operate the website and deliver communications.
+          </p>
+
+          <p>
+            We do not use contact form information for unrelated
+            purposes or sell personal information submitted through
+            the form.
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionLabel}>
           <p className="eyebrow">External Media</p>
         </div>
 
@@ -173,15 +238,23 @@ export default function PrivacyPage() {
           <h2>Your personal information</h2>
 
           <p>
-            Depending on the applicable data protection law, you may
-            have rights concerning your personal information,
-            including rights of access, rectification, erasure,
-            restriction or objection.
+            Depending on the applicable data protection law and the
+            circumstances of the processing, you may have rights of
+            access, rectification, erasure, restriction, objection
+            and data portability.
           </p>
 
           <p>
             To make a privacy-related request, contact us at{" "}
             <a href={`mailto:${brand.email}`}>{brand.email}</a>.
+          </p>
+
+          <p>
+            If you believe that the processing of your personal
+            information infringes applicable data protection law, you
+            also have the right to lodge a complaint with the
+            competent supervisory authority. In Spain, this is the
+            Spanish Data Protection Agency (AEPD).
           </p>
         </div>
       </section>
