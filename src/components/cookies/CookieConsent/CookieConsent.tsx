@@ -8,18 +8,25 @@ type ConsentStatus = "pending" | "accepted" | "rejected";
 
 const STORAGE_KEY = "gamedan-cookie-consent";
 
+function getInitialConsent(): ConsentStatus {
+  if (typeof window === "undefined") {
+    return "pending";
+  }
+
+  const storedConsent = localStorage.getItem(STORAGE_KEY);
+
+  if (storedConsent === "accepted" || storedConsent === "rejected") {
+    return storedConsent;
+  }
+
+  return "pending";
+}
+
 export function CookieConsent() {
-  const [consent, setConsent] = useState<ConsentStatus | null>(null);
+  const [consent, setConsent] =
+    useState<ConsentStatus>(getInitialConsent);
 
   useEffect(() => {
-    const storedConsent = localStorage.getItem(STORAGE_KEY);
-
-    if (storedConsent === "accepted" || storedConsent === "rejected") {
-      setConsent(storedConsent);
-    } else {
-      setConsent("pending");
-    }
-
     function handleConsentChange(event: Event) {
       const customEvent = event as CustomEvent<ConsentStatus>;
 
@@ -39,7 +46,9 @@ export function CookieConsent() {
     };
   }, []);
 
-  function saveConsent(value: Exclude<ConsentStatus, "pending">) {
+  function saveConsent(
+    value: Exclude<ConsentStatus, "pending">,
+  ) {
     localStorage.setItem(STORAGE_KEY, value);
     setConsent(value);
 
@@ -65,14 +74,14 @@ export function CookieConsent() {
           <h2>Cookies & external media</h2>
 
           <p>
-            We use external media from services such as YouTube, SoundCloud
-            and Bandcamp. These services may use cookies or similar
-            technologies when their content is loaded.
+            We use external media from services such as YouTube,
+            SoundCloud and Bandcamp. These services may use cookies
+            or similar technologies when their content is loaded.
           </p>
 
           <p>
-            You can accept or reject external media. You can change your
-            choice later from Cookie settings.
+            You can accept or reject external media. You can change
+            your choice later from Cookie settings.
           </p>
         </div>
 

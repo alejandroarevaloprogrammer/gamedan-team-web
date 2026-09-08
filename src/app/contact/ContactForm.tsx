@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import {
-  type FormEvent,
+  type SubmitEvent,
   useState,
 } from "react";
 
@@ -44,7 +45,7 @@ export function ContactForm() {
     useState("");
 
   async function handleSubmit(
-    event: FormEvent<HTMLFormElement>,
+    event: SubmitEvent<HTMLFormElement>,
   ) {
     event.preventDefault();
 
@@ -220,6 +221,12 @@ export function ContactForm() {
           required
         />
       </div>
+
+      <p className={styles.privacyNotice}>
+        By submitting this form, you acknowledge that the information
+        you provide will be used to respond to your enquiry. See our{" "}
+        <Link href="/privacy">Privacy Policy</Link> for more information.
+      </p>
 
       <div className={styles.formFooter}>
         <p className={styles.requiredText}>

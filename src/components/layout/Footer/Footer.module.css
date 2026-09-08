@@ -78,13 +78,16 @@
 
 .column a:hover {
   color: var(--color-cyan);
+
   transform: translateX(3px);
+
   text-shadow: var(--shadow-cyan);
 }
 
 .column a:focus-visible {
   outline: 3px solid var(--color-cyan);
   outline-offset: 4px;
+
   border-radius: 2px;
 }
 
@@ -99,23 +102,59 @@
   margin-top: 4rem;
   padding-top: 2rem;
 
-  border-top: 1px solid var(--border-soft);
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
+
+  border-top: 1px solid var(--border-soft);
 }
 
 .bottom p {
   color: var(--text-soft);
+
   font-size: 0.9rem;
 }
 
 .bottom .tagline {
   color: var(--color-highlight);
+
   font-weight: 700;
 }
+
+/* ==========================================================
+   LEGAL LINKS
+========================================================== */
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: 0.85rem;
+}
+
+.legalLinks a {
+  color: var(--text-muted);
+
+  transition: color var(--transition-fast);
+}
+
+.legalLinks a:hover {
+  color: var(--color-cyan);
+}
+
+.legalLinks a:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+
+  border-radius: 2px;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
 
 @media (max-width: 980px) {
   .grid {
@@ -138,7 +177,16 @@
     align-items: flex-start;
     gap: 0.75rem;
   }
+
+  .legalLinks {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .column a {

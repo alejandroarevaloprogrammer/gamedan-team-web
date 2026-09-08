@@ -104,7 +104,16 @@ export function Footer() {
           reserved.
         </p>
 
-        <CookieSettingsButton />
+        <nav
+          className={styles.legalLinks}
+          aria-label="Legal information"
+        >
+          <Link href="/privacy">Privacy Policy</Link>
+
+          <Link href="/cookies">Cookie Policy</Link>
+
+          <CookieSettingsButton />
+        </nav>
 
         <p className={styles.tagline}>{brand.tagline}</p>
       </div>
