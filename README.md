@@ -528,8 +528,6 @@ deployment workflows interact in a real production environment.
 
 All content in this repository, including source code, game assets, artwork, images, music, logos and other materials, is the property of GameDan Team and may not be copied, modified, distributed or reused without permission.
 
----
-
 ------------------------------------------------------------------------
 
 ## Author
