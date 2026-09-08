@@ -459,11 +459,11 @@ a real production environment.
 **Alejandro Arevalo Rojas**\
 Front-End Developer
 
+Portfolio: https://alejandroarevalorojas.com
+
 GitHub: https://github.com/alejandroarevaloprogrammer
 
 LinkedIn: https://www.linkedin.com/in/alejandro-ar%C3%A9valo-rojas-755335365/
-
-Portfolio: https://alejandroarevalorojas.com
 
 ------------------------------------------------------------------------
 
