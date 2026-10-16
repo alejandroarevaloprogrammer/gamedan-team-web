@@ -1,4 +1,8 @@
+
 :root {
+  --font-heading: var(--font-sora, Arial, sans-serif);
+  --font-body: var(--font-space-grotesk, Arial, sans-serif);
+
   --color-primary: #ff62bb;
   --color-secondary: #b331f1;
   --color-soft: #ff97d0;

@@ -1,4 +1,6 @@
+
 import type { Metadata } from "next";
+import { Sora, Space_Grotesk } from "next/font/google";
 
 import { CookieConsent } from "@/components/cookies/CookieConsent/CookieConsent";
 import { Footer } from "@/components/layout/Footer/Footer";
@@ -7,6 +9,18 @@ import { BackgroundFX } from "@/components/ui/BackgroundFX/BackgroundFX";
 import { brand } from "@/config/brand";
 
 import "./globals.css";
+
+const sora = Sora({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sora",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.website),
@@ -121,7 +135,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${sora.variable} ${spaceGrotesk.variable}`}
+    >
       <body>
         <script
           type="application/ld+json"

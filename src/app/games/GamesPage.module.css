@@ -1,3 +1,4 @@
+
 .main {
   width: 100%;
 }
@@ -21,6 +22,7 @@
 
 .hero h1 {
   max-width: 900px;
+  letter-spacing: -0.04em;
 }
 
 .intro {
@@ -57,16 +59,13 @@
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
   padding-bottom: var(--space-2xl);
+  scroll-margin-top: 7rem;
 
   display: grid;
   gap: clamp(5rem, 10vw, 8rem);
 }
 
 .librarySection {
-  scroll-margin-top: 7rem;
-}
-
-.library {
   scroll-margin-top: 7rem;
 }
 
@@ -86,6 +85,7 @@
 
 .sectionHeader h2 {
   max-width: 760px;
+  letter-spacing: -0.04em;
 }
 
 .sectionDescription {

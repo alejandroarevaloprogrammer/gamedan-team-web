@@ -46,6 +46,7 @@
 
 .content h1 {
   max-width: 720px;
+  letter-spacing: -0.04em;
 }
 
 .description {
