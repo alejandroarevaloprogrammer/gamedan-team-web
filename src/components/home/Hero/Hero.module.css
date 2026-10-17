@@ -1,3 +1,4 @@
+
 .hero {
   width: min(calc(100% - 2rem), var(--container));
   min-height: calc(100vh - 90px);
@@ -148,6 +149,28 @@
   padding: 0.5rem 0.25rem 0.25rem;
   display: grid;
   gap: 0.75rem;
+}
+
+.gameMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.freeBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(0, 255, 204, 0.35);
+  border-radius: var(--radius-pill);
+  background: rgba(0, 45, 40, 0.65);
+  color: var(--color-cyan);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .featuredInfo h2 {

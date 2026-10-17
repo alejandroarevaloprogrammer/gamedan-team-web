@@ -1,18 +1,18 @@
+
 import Image from "next/image";
 import Link from "next/link";
-import { getFeaturedGame } from "@/lib/games";
-import type { Game } from "@/types/game";
+import { getGameBySlug } from "@/lib/games";
 import styles from "./FeaturedGame.module.css";
 
-function formatStatus(status: Game["status"]): string {
-  return status
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
 export function FeaturedGame() {
-  const featuredGame = getFeaturedGame();
+  const featuredGame = getGameBySlug("suicide-cliff");
+
+  if (!featuredGame) {
+    throw new Error(
+      "Suicide Cliff not found in src/data/games.ts",
+    );
+  }
+
   const trailer = featuredGame.media.trailer;
 
   return (
@@ -21,14 +21,19 @@ export function FeaturedGame() {
       aria-labelledby="featured-game-title"
     >
       <div className={styles.heading}>
-        <p className="eyebrow">Featured Game</p>
+        <p className="eyebrow">Our Biggest Hit</p>
+
         <h2 id="featured-game-title">
-          Discover our current highlight.
+          A little game with a big impact.
         </h2>
       </div>
 
       <article className={styles.showcase}>
-        <div className={styles.media}>
+        <Link
+          href={`/games/${featuredGame.slug}`}
+          className={styles.media}
+          aria-label={`View ${featuredGame.title}`}
+        >
           <Image
             src={featuredGame.media.cover}
             alt={`${featuredGame.title} cover art`}
@@ -41,9 +46,9 @@ export function FeaturedGame() {
           <div className={styles.overlay} />
 
           <span className={styles.status}>
-            {formatStatus(featuredGame.status)}
+            Free to Play
           </span>
-        </div>
+        </Link>
 
         <div className={styles.content}>
           <p className={styles.genres}>

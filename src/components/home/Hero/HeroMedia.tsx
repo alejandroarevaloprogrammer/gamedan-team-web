@@ -1,18 +1,8 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedGame } from "@/lib/games";
-import type { Game } from "@/types/game";
 import styles from "./Hero.module.css";
-
-function formatStatus(status: Game["status"]): string {
-  return status
-    .split("-")
-    .map(
-      (word) =>
-        word.charAt(0).toUpperCase() + word.slice(1),
-    )
-    .join(" ");
-}
 
 export function HeroMedia() {
   const featuredGame = getFeaturedGame();
@@ -37,14 +27,20 @@ export function HeroMedia() {
           <div className={styles.mediaOverlay} />
 
           <span className={styles.statusBadge}>
-            {formatStatus(featuredGame.status)}
+            Featured Project
           </span>
         </div>
 
         <div className={styles.featuredInfo}>
-          <p className="eyebrow">
-            {featuredGame.genres.join(" · ")}
-          </p>
+          <div className={styles.gameMeta}>
+            <p className="eyebrow">
+              {featuredGame.genres.join(" · ")}
+            </p>
+
+            <span className={styles.freeBadge}>
+              Free on Release
+            </span>
+          </div>
 
           <h2>{featuredGame.title}</h2>
 
