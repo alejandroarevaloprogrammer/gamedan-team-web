@@ -43,7 +43,7 @@
 .contactSection {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: 0 0 var(--space-2xl);
+  padding: 0 0 3rem;
 
   display: grid;
   grid-template-columns:
@@ -521,7 +521,7 @@
   }
 
   .contactSection {
-    padding-bottom: var(--space-xl);
+    padding-bottom: 3rem;
   }
 
   .fieldGrid {

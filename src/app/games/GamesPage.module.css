@@ -24,7 +24,7 @@
 .library {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding-bottom: var(--space-2xl);
+  padding-bottom: 3rem;
   scroll-margin-top: 7rem;
 
   display: grid;
@@ -100,7 +100,7 @@
   }
 
   .library {
-    padding-bottom: var(--space-xl);
+    padding-bottom: 3rem;
     gap: var(--space-xl);
   }
 

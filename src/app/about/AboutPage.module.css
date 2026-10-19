@@ -7,7 +7,6 @@
    HERO
 ========================================================== */
 
-
 .hero {
   width: min(calc(100% - 2rem), var(--container));
   min-height: auto;
@@ -41,7 +40,6 @@
    BRAND MARK
 ========================================================== */
 
-
 .brandMark {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
@@ -51,7 +49,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .logoGlow {
   position: relative;
@@ -268,7 +265,7 @@
 .cta {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(4rem, 7vw, 6rem) 0;
+  padding: clamp(4rem, 7vw, 6rem) 0 clamp(3rem, 5vw, 4rem);
 
   display: flex;
   flex-direction: column;
@@ -334,7 +331,7 @@
   }
 
   .cta {
-    padding: 5rem 0;
+    padding: 5rem 0 3rem;
   }
 
   .genreList {
