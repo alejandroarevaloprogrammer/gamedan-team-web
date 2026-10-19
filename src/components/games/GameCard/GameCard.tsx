@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Game } from "@/types/game";
@@ -5,6 +6,7 @@ import styles from "./GameCard.module.css";
 
 type GameCardProps = {
   game: Game;
+  badge?: "free";
 };
 
 function formatStatus(status: Game["status"]): string {
@@ -14,7 +16,9 @@ function formatStatus(status: Game["status"]): string {
     .join(" ");
 }
 
-export function GameCard({ game }: GameCardProps) {
+export function GameCard({ game, badge }: GameCardProps) {
+  const badgeText = badge === "free" ? "Free to Play" : formatStatus(game.status);
+
   return (
     <article className={styles.card}>
       <Link
@@ -33,7 +37,11 @@ export function GameCard({ game }: GameCardProps) {
 
           <div className={styles.overlay} />
 
-          <span className={styles.status}>{formatStatus(game.status)}</span>
+          <span
+            className={`${styles.status} ${badge === "free" ? styles.freeBadge : ""}`}
+          >
+            {badgeText}
+          </span>
         </div>
 
         <div className={styles.content}>
