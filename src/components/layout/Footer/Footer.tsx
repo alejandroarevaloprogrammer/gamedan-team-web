@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 import { CookieSettingsButton } from "@/components/cookies/CookieConsent/CookieSettingsButton";
@@ -37,10 +38,6 @@ export function Footer() {
             className={styles.links}
             aria-label="Discover GameDan Team"
           >
-            <Link href="/games#game-library">
-              Game Library
-            </Link>
-
             <Link href="/games#featured-game">
               Featured Game
             </Link>

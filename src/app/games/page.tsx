@@ -99,26 +99,11 @@ export default function GamesPage() {
 
   return (
     <main className={styles.main}>
-      <section
-        id="game-library"
-        className={styles.hero}
-      >
-        <p className="eyebrow">Game Library</p>
-
+      <header className={styles.pageHeader}>
         <h1>Our Games</h1>
+      </header>
 
-        <p className={styles.intro}>
-          Explore the retro and anime-inspired games created by
-          GameDan Team, from visual novels to casual and action
-          experiences.
-        </p>
-
-        <p className={styles.total}>
-          {games.length} {games.length === 1 ? "game" : "games"} in
-          our current library
-        </p>
-      </section>
-
+      
       <div className={styles.library}>
         <GameSection
           id="featured-game"
@@ -126,6 +111,14 @@ export default function GamesPage() {
           title="Our current highlight."
           description="The project currently at the centre of GameDan Team."
           games={featuredGames}
+        />
+
+        <GameSection
+          id="released-games"
+          eyebrow="Free to Play"
+          title="Ready to play?"
+          description="Explore our collection of free games and start playing right now."
+          games={releasedGames}
         />
 
         <GameSection
@@ -143,15 +136,8 @@ export default function GamesPage() {
           description="Games that are preparing for their next major release."
           games={comingSoonGames}
         />
-
-        <GameSection
-          id="released-games"
-          eyebrow="Released"
-          title="Games you can already discover."
-          description="Completed GameDan Team projects currently available to players."
-          games={releasedGames}
-        />
       </div>
+
     </main>
   );
 }

@@ -9,6 +9,11 @@ type GameCardProps = {
   badge?: "free";
 };
 
+const freeOnReleaseGames = new Set([
+  "ona-bar",
+  "hacker-friend",
+]);
+
 function formatStatus(status: Game["status"]): string {
   return status
     .split("-")
@@ -17,7 +22,15 @@ function formatStatus(status: Game["status"]): string {
 }
 
 export function GameCard({ game, badge }: GameCardProps) {
-  const badgeText = badge === "free" ? "Free to Play" : formatStatus(game.status);
+  const isFreeToPlay = badge === "free" || game.status === "released";
+
+  const badgeText = isFreeToPlay
+    ? "Free to Play"
+    : formatStatus(game.status);
+
+  const showFreeOnRelease =
+    game.status === "in-development" &&
+    freeOnReleaseGames.has(game.slug);
 
   return (
     <article className={styles.card}>
@@ -38,10 +51,16 @@ export function GameCard({ game, badge }: GameCardProps) {
           <div className={styles.overlay} />
 
           <span
-            className={`${styles.status} ${badge === "free" ? styles.freeBadge : ""}`}
+            className={`${styles.status} ${isFreeToPlay ? styles.freeBadge : ""}`}
           >
             {badgeText}
           </span>
+
+          {showFreeOnRelease && (
+            <span className={styles.freeOnRelease}>
+              Free on Release
+            </span>
+          )}
         </div>
 
         <div className={styles.content}>
