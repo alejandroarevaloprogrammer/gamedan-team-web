@@ -28,7 +28,7 @@
   scroll-margin-top: 7rem;
 
   display: grid;
-  gap: clamp(5rem, 10vw, 8rem);
+  gap: clamp(4rem, 7vw, 6rem);
 }
 
 .librarySection {

@@ -1,3 +1,4 @@
+
 .main {
   width: 100%;
 }
@@ -6,11 +7,12 @@
    HERO
 ========================================================== */
 
+
 .hero {
   width: min(calc(100% - 2rem), var(--container));
-  min-height: calc(82vh - 90px);
+  min-height: auto;
   margin-inline: auto;
-  padding: clamp(5rem, 10vw, 9rem) 0;
+  padding: clamp(4rem, 6vw, 6rem) 0 2rem;
 
   display: flex;
   flex-direction: column;
@@ -39,15 +41,17 @@
    BRAND MARK
 ========================================================== */
 
+
 .brandMark {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(2rem, 6vw, 5rem) 0 clamp(5rem, 9vw, 8rem);
+  padding: 1rem 0 clamp(3rem, 5vw, 4rem);
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .logoGlow {
   position: relative;
@@ -98,7 +102,7 @@
 .section {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(3rem, 5vw, 4rem) 0;
 
   display: grid;
   grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
@@ -163,7 +167,7 @@
 .valuesSection {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(3rem, 5vw, 4rem) 0;
 
   border-top: 1px solid var(--border-soft);
 }
@@ -216,7 +220,7 @@
 .beliefsSection {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(5rem, 10vw, 9rem) 0;
+  padding: clamp(3rem, 5vw, 4rem) 0;
 
   display: grid;
   grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
@@ -264,7 +268,7 @@
 .cta {
   width: min(calc(100% - 2rem), var(--container));
   margin-inline: auto;
-  padding: clamp(6rem, 12vw, 11rem) 0;
+  padding: clamp(4rem, 7vw, 6rem) 0;
 
   display: flex;
   flex-direction: column;
@@ -307,7 +311,7 @@
 @media (max-width: 700px) {
   .hero {
     min-height: auto;
-    padding: 4.5rem 0 6rem;
+    padding: 3.5rem 0 2rem;
   }
 
   .hero h1 {
@@ -316,7 +320,7 @@
   }
 
   .brandMark {
-    padding: 1rem 0 4.5rem;
+    padding: 1rem 0 3rem;
   }
 
   .logoImage {
@@ -326,7 +330,7 @@
   .section,
   .valuesSection,
   .beliefsSection {
-    padding: 4.5rem 0;
+    padding: 3rem 0;
   }
 
   .cta {
