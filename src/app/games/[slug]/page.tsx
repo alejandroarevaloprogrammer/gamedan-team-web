@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import { GameSoundtrack } from "@/components/games/GameSoundtrack";
 import { GameGallery } from "@/components/games/GameGallery";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
+import { getGameImageDimensions } from "@/lib/gameImage";
 import type {
   GamePlatform,
   GameStatus,
@@ -100,6 +102,10 @@ export default async function GamePage({
   }
 
   const trailer = game.media.trailer;
+  const detailImage = game.media.titleScreen || game.media.cover;
+
+  const { width, height } =
+    await getGameImageDimensions(detailImage);
 
   const videoGameJsonLd = {
     "@context": "https://schema.org",
@@ -153,9 +159,14 @@ export default async function GamePage({
           <div className={styles.coverPanel}>
             <div className={styles.coverFrame}>
               <Image
-                src={game.media.cover}
-                alt={`${game.title} cover art`}
-                fill
+                src={detailImage}
+                alt={`${game.title} ${
+                  game.media.titleScreen
+                    ? "title screen"
+                    : "cover art"
+                }`}
+                width={width}
+                height={height}
                 loading="eager"
                 sizes="(max-width: 900px) 100vw, 54vw"
                 className={styles.coverImage}
@@ -294,8 +305,6 @@ export default async function GamePage({
               {game.distribution.pressKitUrl && (
                 <a
                   href={game.distribution.pressKitUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className={styles.secondaryAction}
                 >
                   Press kit
@@ -334,9 +343,7 @@ export default async function GamePage({
         game.media.screenshots.length > 0 && (
           <GameGallery
             gameTitle={game.title}
-            screenshots={
-              game.media.screenshots
-            }
+            screenshots={game.media.screenshots}
           />
         )}
     </main>

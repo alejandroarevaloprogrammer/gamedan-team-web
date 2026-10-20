@@ -1,3 +1,4 @@
+
 import type { Game } from "@/types/game";
 
 export const games: Game[] = [
@@ -25,6 +26,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/ona-bar/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/ona-bar/screenshots/01.png",
@@ -73,6 +75,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/memory-hand/cover.png",
+      titleScreen: "",
 
       trailer: {
         type: "youtube",
@@ -131,6 +134,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/downriver-ride/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/downriver-ride/screenshots/01.png",
@@ -184,6 +188,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/falling-pirates/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/falling-pirates/screenshots/01.png",
@@ -237,6 +242,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/kuro-hole/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/kuro-hole/screenshots/01.png",
@@ -289,6 +295,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/bunny-kicker/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/bunny-kicker/screenshots/01.png",
@@ -341,6 +348,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/ecus/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/ecus/screenshots/01.gif",
@@ -388,6 +396,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/slime-labyrinth/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/slime-labyrinth/screenshots/01.png",
@@ -435,6 +444,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/hacker-friend/cover.png",
+      titleScreen: "",
 
       screenshots: [
         "/games/hacker-friend/screenshots/01.png",
@@ -483,6 +493,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/distance-of-love/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/distance-of-love/distanceoflove.html",
@@ -543,6 +554,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/suicide-cliff/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/suicide-cliff/suicidecliff.html",
@@ -604,6 +616,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/no-help-no-hope/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/no-help-no-hope/nohelpnohope.html",
@@ -664,6 +677,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/sea-friends-full-hd/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/seafriends-full-hd/seafriendsfullhd.html",
@@ -723,6 +737,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/sea-friends/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/sea-friends/seafriends.html",
@@ -783,6 +798,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/punal-the-adventure/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/punal-the-adventure/punaltheadventure.html",
@@ -843,6 +859,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/akacrayon/cover.png",
+      titleScreen: "",
 
       html5Entry:
         "/playable-games/akacrayon/akacrayon.html",
@@ -903,6 +920,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/covox-park/cover.png",
+      titleScreen: "/games/covox-park/titlescreen.png",
 
       html5Entry:
         "/playable-games/covox-park/covoxpark.html",
@@ -938,5 +956,4 @@ export const games: Game[] = [
   // ==========================================================
   // END COVOX PARK
   // ==========================================================
-
 ];

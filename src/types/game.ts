@@ -1,3 +1,4 @@
+
 export type GameStatus =
   | "released"
   | "in-development"
@@ -29,6 +30,7 @@ export type GameTrailer =
 
 export type GameMedia = {
   cover: string;
+  titleScreen?: string;
   logo?: string;
   icon?: string;
   hero?: string;
