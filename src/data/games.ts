@@ -798,7 +798,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/punal-the-adventure/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/punal-the-adventure/titlescreen.png",
 
       html5Entry:
         "/playable-games/punal-the-adventure/punaltheadventure.html",
@@ -859,7 +859,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/akacrayon/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/akacrayon/titlescreen.png",
 
       html5Entry:
         "/playable-games/akacrayon/akacrayon.html",
