@@ -444,7 +444,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/hacker-friend/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/hacker-friend/titlescreen.png",
 
       screenshots: [
         "/games/hacker-friend/screenshots/01.png",
@@ -493,7 +493,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/distance-of-love/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/distance-of-love/titlescreen.png",
 
       html5Entry:
         "/playable-games/distance-of-love/distanceoflove.html",
@@ -554,7 +554,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/suicide-cliff/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/suicide-cliff/titlescreen.png",
 
       html5Entry:
         "/playable-games/suicide-cliff/suicidecliff.html",
@@ -616,7 +616,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/no-help-no-hope/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/no-help-no-hope/titlescreen.png",
 
       html5Entry:
         "/playable-games/no-help-no-hope/nohelpnohope.html",
