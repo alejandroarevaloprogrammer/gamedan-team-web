@@ -33,7 +33,7 @@ const platformLabels: Record<GamePlatform, string> = {
   windows: "Windows",
   mac: "macOS",
   linux: "Linux",
-  web: "HTML5",
+  web: "Play Online",
   android: "Android",
   ios: "iOS",
   switch: "Nintendo Switch",
