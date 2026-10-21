@@ -295,7 +295,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/bunny-kicker/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/bunny-kicker/titlescreen.png",
 
       screenshots: [
         "/games/bunny-kicker/screenshots/01.png",
@@ -348,7 +348,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/ecus/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/ecus/titlescreen.png",
 
       screenshots: [
         "/games/ecus/screenshots/01.gif",
@@ -396,7 +396,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/slime-labyrinth/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/slime-labyrinth/titlescreen.png",
 
       screenshots: [
         "/games/slime-labyrinth/screenshots/01.png",
