@@ -75,7 +75,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/memory-hand/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/memory-hand/titlescreen.png",
 
       trailer: {
         type: "youtube",
@@ -134,7 +134,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/downriver-ride/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/downriver-ride/titlescreen.png",
 
       screenshots: [
         "/games/downriver-ride/screenshots/01.png",
@@ -188,7 +188,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/falling-pirates/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/falling-pirates/titlescreen.png",
 
       screenshots: [
         "/games/falling-pirates/screenshots/01.png",
@@ -242,7 +242,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/kuro-hole/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/kuro-hole/titlescreen.png",
 
       screenshots: [
         "/games/kuro-hole/screenshots/01.png",
