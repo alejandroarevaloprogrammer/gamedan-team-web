@@ -677,7 +677,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/sea-friends-full-hd/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/sea-friends-full-hd/titlescreen.png",
 
       html5Entry:
         "/playable-games/seafriends-full-hd/seafriendsfullhd.html",
@@ -737,7 +737,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/sea-friends/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/sea-friends/titlescreen.png",
 
       html5Entry:
         "/playable-games/sea-friends/seafriends.html",
