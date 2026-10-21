@@ -26,7 +26,7 @@ export const games: Game[] = [
 
     media: {
       cover: "/games/ona-bar/cover.png",
-      titleScreen: "",
+      titleScreen: "/games/ona-bar/titlescreen.png",
 
       screenshots: [
         "/games/ona-bar/screenshots/01.png",

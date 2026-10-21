@@ -157,7 +157,12 @@ export default async function GamePage({
 
         <div className={styles.heroInner}>
           <div className={styles.coverPanel}>
-            <div className={styles.coverFrame}>
+            <div
+              className={styles.coverFrame}
+              style={{
+                width: `min(100%, ${Math.round((width / height) * 600)}px)`,
+              }}
+            >
               <Image
                 src={detailImage}
                 alt={`${game.title} ${
