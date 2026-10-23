@@ -15,7 +15,7 @@ export const games: Game[] = [
 
     status: "in-development",
 
-    platforms: ["windows", "web"],
+    platforms: ["web", "windows"],
 
     genres: ["Visual Novel", "Anime"],
 
