@@ -191,7 +191,6 @@ export const games: Game[] = [
       titleScreen: "/games/falling-pirates/titlescreen.png",
 
       screenshots: [
-        "/games/falling-pirates/screenshots/01.png",
         "/games/falling-pirates/screenshots/02.png",
         "/games/falling-pirates/screenshots/03.png",
         "/games/falling-pirates/screenshots/04.png",
