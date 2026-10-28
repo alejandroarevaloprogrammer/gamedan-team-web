@@ -400,6 +400,8 @@ export const games: Game[] = [
 
       screenshots: [
         "/games/slime-labyrinth/screenshots/01.png",
+        "/games/slime-labyrinth/screenshots/02.png",
+        "/games/slime-labyrinth/screenshots/03.png",
       ],
     },
 
