@@ -22,7 +22,7 @@ export const games: Game[] = [
     shortDescription: "A special and dangerous place.",
 
     description:
-      "The place where everything begins. Ona Bar will become a special place for you, where the choices you make can shape your path. Decide what to do, find your own way and discover how your actions may lead you to love.",
+      "Some places are more dangerous than they seem. Step into Ona Bar and experience an original story where romance and danger are never far apart. As the story unfolds, one final decision may change everything.",
 
     media: {
       cover: "/games/ona-bar/cover.png",
@@ -487,10 +487,10 @@ export const games: Game[] = [
 
     genres: ["Kinetic Novel", "Anime"],
 
-    shortDescription: "A big distance between two hearts.",
+    shortDescription: "Sometimes the heart takes an unexpected path.",
 
     description:
-      "A long-distance relationship puts two hearts to the test. She wants to be with him, while he seems determined to remain just friends. Follow their story as distance, feelings and uncertainty stand between them, and discover whether love can bring them closer together.",
+      "Love is not always what we imagine it to be. Follow a young woman's emotional journey as she navigates feelings, uncertainty, and the distance between expectations and reality. A story about unexpected connections and discovering what the heart truly wants.",
 
     media: {
       cover: "/games/distance-of-love/cover.png",
@@ -551,7 +551,7 @@ export const games: Game[] = [
     shortDescription: "Suicide is not the answer.",
 
     description:
-      "At Suicide Cliff, you encounter a story shaped by pain, difficult choices and the reasons that can lead people to lose hope. As the story unfolds, reflect on what drives someone to such a breaking point and discover whether a different path forward is still possible.",
+      "Every life hides a story, and some are darker than others. Suicide Cliff invites you into an unsettling tale of despair, hidden emotions, and the silent battles people face. As the story unfolds, discover what lies behind the darkness and whether hope can still be found when everything seems lost.",
 
     media: {
       cover: "/games/suicide-cliff/cover.png",
