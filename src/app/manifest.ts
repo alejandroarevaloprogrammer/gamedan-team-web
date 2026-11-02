@@ -10,6 +10,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: brand.shortName,
     description: brand.description,
     start_url: "/",
+    scope: "/",
     display: "standalone",
     background_color: "#FBF5A7",
     theme_color: "#FBF5A7",
