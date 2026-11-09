@@ -910,7 +910,7 @@ export const games: Game[] = [
 
     status: "released",
 
-    platforms: ["web"],
+    platforms: ["web","windows"],
 
     genres: ["Kinetic Novel", "Anime"],
 
@@ -938,6 +938,7 @@ export const games: Game[] = [
 
     distribution: {
       internalPlayUrl: "/play/covox-park",
+      downloadUrl: "/downloadable-games/covox-park-windows.zip",
       itchUrl: "https://gamedanteam.itch.io/covox-park",
     },
 

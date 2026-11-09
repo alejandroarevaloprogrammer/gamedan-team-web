@@ -272,6 +272,15 @@ export default async function GamePage({
                 </a>
               )}
 
+              {game.distribution.downloadUrl && (
+                <a
+                  href={game.distribution.downloadUrl}
+                  className={styles.primaryAction}
+                >
+                  Download for Free
+                </a>
+              )}
+
               {game.distribution.itchUrl && (
                 <a
                   href={game.distribution.itchUrl}
@@ -284,15 +293,6 @@ export default async function GamePage({
                   }
                 >
                   View on itch.io
-                </a>
-              )}
-
-              {game.distribution.downloadUrl && (
-                <a
-                  href={game.distribution.downloadUrl}
-                  className={styles.primaryAction}
-                >
-                  Download
                 </a>
               )}
 
