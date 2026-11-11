@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { GameTrailer } from "@/components/games/GameTrailer";
 import { GameSoundtrack } from "@/components/games/GameSoundtrack";
 import { GameGallery } from "@/components/games/GameGallery";
+import { GameDownloadModal } from "@/components/games/GameDownloadModal/GameDownloadModal";
 import { brand } from "@/config/brand";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 import { getGameImageDimensions } from "@/lib/gameImage";
@@ -272,13 +273,22 @@ export default async function GamePage({
                 </a>
               )}
 
-              {game.distribution.downloadUrl && (
-                <a
-                  href={game.distribution.downloadUrl}
-                  className={styles.primaryAction}
-                >
-                  Download for Free
-                </a>
+              {game.distribution.downloadUrls ? (
+                <GameDownloadModal
+                  gameTitle={game.title}
+                  windowsX64Url={game.distribution.downloadUrls.windowsX64}
+                  windowsArm64Url={game.distribution.downloadUrls.windowsArm64}
+                  triggerClassName={styles.primaryAction}
+                />
+              ) : (
+                game.distribution.downloadUrl && (
+                  <a
+                    href={game.distribution.downloadUrl}
+                    className={styles.primaryAction}
+                  >
+                    Download for free
+                  </a>
+                )
               )}
 
               {game.distribution.itchUrl && (

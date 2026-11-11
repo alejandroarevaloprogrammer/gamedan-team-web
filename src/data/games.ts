@@ -938,7 +938,10 @@ export const games: Game[] = [
 
     distribution: {
       internalPlayUrl: "/play/covox-park",
-      downloadUrl: "/downloadable-games/covox-park-windows.zip",
+      downloadUrls: {
+        windowsX64: "/downloadable-games/covox-park-windows-x64.zip",
+        windowsArm64: "/downloadable-games/covox-park-windows-arm64.zip",
+      },
       itchUrl: "https://gamedanteam.itch.io/covox-park",
     },
 

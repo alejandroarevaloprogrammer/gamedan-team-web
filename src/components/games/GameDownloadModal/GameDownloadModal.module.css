@@ -1,0 +1,281 @@
+
+/* ==========================================================
+   MODAL BACKDROP
+========================================================== */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  padding: 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(9, 0, 20, 0.84);
+  backdrop-filter: blur(12px);
+
+  animation: backdropIn 220ms ease both;
+}
+
+/* ==========================================================
+   MODAL CONTAINER
+========================================================== */
+
+.modal {
+  position: relative;
+  width: min(100%, 520px);
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+
+  border: 1px solid rgba(255, 98, 187, 0.38);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(179, 49, 241, 0.16),
+      transparent 38%
+    ),
+    var(--bg-surface);
+
+  box-shadow:
+    0 0 70px rgba(179, 49, 241, 0.2),
+    0 0 35px rgba(255, 98, 187, 0.12);
+
+  animation: modalIn 260ms ease both;
+}
+
+/* ==========================================================
+   CLOSE BUTTON
+========================================================== */
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text-main);
+
+  font-size: 1.6rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.closeButton:hover {
+  color: var(--color-soft);
+  border-color: var(--color-soft);
+  transform: rotate(90deg);
+}
+
+/* ==========================================================
+   MODAL HEADER
+========================================================== */
+
+.eyebrow {
+  margin-bottom: 0.85rem;
+
+  color: var(--color-highlight);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.modal h2 {
+  max-width: calc(100% - 2rem);
+
+  color: var(--text-main);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.description {
+  margin-top: 0.85rem;
+
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ==========================================================
+   DOWNLOAD OPTIONS
+========================================================== */
+
+.downloadOptions {
+  margin-top: 1.75rem;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.downloadOption {
+  padding: 1.25rem;
+
+  display: grid;
+  gap: 0.8rem;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.optionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.optionHeader h3 {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.recommended {
+  padding: 0.4rem 0.65rem;
+
+  border: 1px solid rgba(49, 241, 179, 0.3);
+  border-radius: var(--radius-pill);
+
+  background: rgba(49, 241, 179, 0.08);
+  color: var(--color-cyan);
+
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.downloadOption > p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================
+   DOWNLOAD BUTTON
+========================================================== */
+
+.downloadButton {
+  min-height: 46px;
+  padding: 0.8rem 1.2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-pill);
+
+  background: var(--gradient-main);
+  color: var(--bg-main);
+
+  font-weight: 900;
+  text-align: center;
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-pink);
+}
+
+/* ==========================================================
+   MODAL FOOTER
+========================================================== */
+
+.footerNote {
+  margin-top: 1.5rem;
+
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 500px) {
+  .backdrop {
+    padding: 0.85rem;
+  }
+
+  .modal {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .optionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .modal {
+    animation: none;
+  }
+
+  .closeButton,
+  .downloadButton {
+    transition: none;
+  }
+}

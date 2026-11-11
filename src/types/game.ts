@@ -42,9 +42,15 @@ export type GameMedia = {
 export type GameDistribution = {
   internalPlayUrl?: string;
   steamUrl?: string;
+  downloadUrl?: string;
+
+  downloadUrls?: {
+    windowsX64?: string;
+    windowsArm64?: string;
+  };
+
   itchUrl?: string;
   websiteUrl?: string;
-  downloadUrl?: string;
   pressKitUrl?: string;
 };
 
